@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>徳島帰省のしおり 8/10–8/11</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#2E5FA3;
+  --navy:#1E3A5F;
+  --sky:#EAF3FB;
+  --sun:#E8552F;
+  --sun-soft:#FBEAE2;
+  --green:#3E8E5A;
+  --green-soft:#E7F3EB;
+  --card:#FFFFFF;
+  --line:#C7D9EC;
+  --river:#7FB5E0;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{height:100%;}
+body{
+  font-family:'Noto Sans JP',sans-serif;
+  background:var(--sky);
+  color:var(--navy);
+  line-height:1.7;
+  padding-bottom:calc(40px + env(safe-area-inset-bottom));
+}
+.pane::after{content:"";display:block;height:16px;}
+.wrap{max-width:560px;margin:0 auto;padding:0 16px;}
+
+/* ── ヘッダー：切符風(コンパクト) ── */
+header{
+  background:var(--blue);color:#fff;padding:16px 0 14px;
+  position:relative;
+}
+header::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:8px;
+  background:repeating-linear-gradient(90deg,#fff 0 10px,transparent 10px 20px);
+  opacity:.45;
+}
+.ticket{
+  background:#fff;color:var(--navy);border-radius:12px;
+  padding:12px 18px;position:relative;box-shadow:0 3px 0 rgba(0,0,0,.15);
+  display:flex;align-items:center;justify-content:space-between;gap:10px;
+}
+.ticket::before,.ticket::after{
+  content:"";position:absolute;top:50%;width:18px;height:18px;
+  background:var(--blue);border-radius:50%;transform:translateY(-50%);
+}
+.ticket::before{left:-9px;}
+.ticket::after{right:-9px;}
+h1{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;
+  font-size:17px;line-height:1.35;
+}
+h1 small{display:block;font-size:11px;color:var(--sun);font-weight:700;letter-spacing:.12em;}
+.ticket .dates{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
+  font-size:12px;text-align:right;color:#6b7f95;white-space:nowrap;
+}
+.ticket .dates b{display:block;font-size:15px;color:var(--blue);}
+
+/* ── タブ本体 ── */
+.pane{display:none;animation:fadein .25s ease;}
+.pane.active{display:block;}
+@keyframes fadein{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media(prefers-reduced-motion:reduce){.pane{animation:none;}}
+
+section{margin-top:22px;}
+h2{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:17px;
+  display:flex;align-items:center;gap:8px;margin-bottom:12px;
+}
+h2 .em{font-size:21px;}
+
+/* ── 日付サブタブ(スケジュール内) ── */
+.subtabs{
+  position:sticky;top:54px;z-index:30;
+  background:linear-gradient(var(--sky) 82%,rgba(234,243,251,0));
+  padding:12px 0 10px;margin-top:8px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+}
+.subtabs button{
+  appearance:none;cursor:pointer;border:2px solid var(--line);background:#fff;
+  border-radius:12px;padding:8px 4px 7px;
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;color:#7a8ea3;
+  font-size:15px;line-height:1.25;transition:all .15s;
+}
+.subtabs button small{display:block;font-size:10px;font-weight:700;}
+.subtabs button.on{background:var(--sun);border-color:var(--sun);color:#fff;box-shadow:0 3px 0 rgba(0,0,0,.12);}
+.subtabs button:focus-visible{outline:3px solid var(--blue);outline-offset:2px;}
+.subpane{display:none;animation:fadein .25s ease;}
+.subpane.active{display:block;}
+
+/* ── 上部タブバー ── */
+nav.tabbar{
+  position:sticky;top:0;z-index:50;
+  background:#fff;border-bottom:2px solid var(--line);
+  box-shadow:0 2px 8px rgba(30,58,95,.08);
+}
+nav.tabbar .inner{
+  max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);
+}
+nav.tabbar button{
+  appearance:none;border:0;background:none;cursor:pointer;
+  padding:7px 2px 6px;display:flex;flex-direction:column;align-items:center;gap:0;
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:10px;
+  color:#8ba0b6;border-bottom:3px solid transparent;margin-bottom:-2px;
+  transition:color .15s;
+}
+nav.tabbar button .ic{font-size:19px;line-height:1.2;filter:grayscale(.6);opacity:.75;transition:all .15s;}
+nav.tabbar button.on{color:var(--sun);border-bottom-color:var(--sun);}
+nav.tabbar button.on .ic{filter:none;opacity:1;transform:scale(1.1);}
+nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px;border-radius:8px;}
+
+/* ── メンバー ── */
+.members{display:flex;flex-wrap:wrap;gap:8px;}
+.member{
+  background:var(--card);border:2px solid var(--line);border-radius:999px;
+  padding:5px 13px;font-size:13px;font-weight:500;
+  display:flex;align-items:center;gap:6px;
+}
+.member .tag{font-size:10px;font-weight:700;color:#fff;background:var(--blue);border-radius:999px;padding:1px 7px;}
+.member .tag.kids{background:var(--sun);}
+.member .tag.toku{background:var(--green);}
+
+/* ── デイカード ── */
+.daycard{
+  background:var(--card);border-radius:16px;padding:18px 20px;
+  box-shadow:0 2px 8px rgba(30,58,95,.08);
+}
+.dayhead{
+  display:flex;align-items:baseline;gap:10px;margin-bottom:12px;
+  font-family:'Zen Maru Gothic',sans-serif;
+}
+.dayhead .d{font-weight:900;font-size:24px;color:var(--sun);}
+.dayhead .w{font-weight:700;font-size:13px;color:#6b7f95;}
+.dayhead .t{font-weight:700;font-size:14px;}
+.simple{display:flex;gap:12px;align-items:flex-start;}
+.simple + .simple{margin-top:10px;}
+.simple .time{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
+  color:var(--blue);white-space:nowrap;font-size:15px;min-width:56px;
+}
+.simple p{font-size:14px;}
+.note{margin-top:12px;background:var(--sun-soft);border-radius:10px;padding:10px 14px;font-size:13px;}
+.note b{color:var(--sun);}
+.note.green{background:var(--green-soft);}
+.note.green b{color:var(--green);}
+
+/* ── 路線図タイムライン ── */
+.rail{position:relative;margin:6px 0 0 6px;padding-left:30px;}
+.rail::before{
+  content:"";position:absolute;left:8px;top:10px;bottom:10px;width:6px;
+  background:var(--blue);border-radius:3px;
+}
+.stop{position:relative;padding:0 0 24px;}
+.stop:last-child{padding-bottom:0;}
+.stop::before{
+  content:"";position:absolute;left:-27px;top:6px;width:16px;height:16px;
+  background:#fff;border:4px solid var(--blue);border-radius:50%;
+}
+.stop.major::before{border-color:var(--sun);width:18px;height:18px;left:-28px;top:5px;}
+.stop .time{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;color:var(--blue);}
+.stop.major .time{color:var(--sun);}
+.stop .what{font-weight:700;font-size:15px;}
+.stop .memo{font-size:13px;color:#5a6f86;margin-top:2px;}
+.chip{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:1px 8px;margin-left:6px;vertical-align:2px;}
+.chip.car{background:var(--green-soft);color:var(--green);}
+.chip.train{background:#E3ECF7;color:var(--blue);}
+
+/* ── リッチリンクカード ── */
+.linkcard{
+  background:var(--card);border-radius:16px;overflow:hidden;
+  box-shadow:0 2px 8px rgba(30,58,95,.10);
+}
+.linkcard + .linkcard{margin-top:16px;}
+.lc-hero{
+  height:86px;display:flex;align-items:center;padding:0 20px;gap:14px;color:#fff;
+}
+.lc-hero .big{font-size:40px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));}
+.lc-hero .name{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:17px;line-height:1.3;}
+.lc-hero .name small{display:block;font-size:11px;font-weight:700;opacity:.85;letter-spacing:.08em;}
+.lc-hero.train{background:linear-gradient(120deg,#2E5FA3,#4A7FC9 60%,#E8552F 145%);}
+.lc-hero.teishoku{background:linear-gradient(120deg,#3E8E5A,#66AE7E);}
+.lc-hero.izakaya{background:linear-gradient(120deg,#B0491F,#E8552F);}
+.lc-body{padding:14px 20px 16px;}
+.lc-facts{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;margin-bottom:10px;}
+.lc-facts .f{display:flex;gap:5px;align-items:baseline;}
+.lc-facts .k{font-size:11px;color:#8ba0b6;font-weight:700;}
+.lc-facts .star{color:#E8A02F;font-weight:700;}
+.lc-desc{font-size:13px;color:#4d6378;margin-bottom:12px;}
+.lc-btns{display:flex;flex-wrap:wrap;gap:8px;}
+.lc-btns a{
+  flex:1;min-width:100px;text-align:center;text-decoration:none;
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:13px;
+  padding:9px 8px;border-radius:10px;transition:transform .1s;
+}
+.lc-btns a:active{transform:scale(.96);}
+.lc-btns a.primary{background:var(--blue);color:#fff;}
+.lc-btns a.tabelog{background:#FFF3E8;color:#C75B00;border:1.5px solid #F0C9A0;}
+.lc-btns a.map{background:var(--sky);color:var(--blue);border:1.5px solid var(--line);}
+.lc-btns a.tel{background:var(--green-soft);color:var(--green);border:1.5px solid #BADCC7;}
+
+/* ── マップ ── */
+.mapcard{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 2px 8px rgba(30,58,95,.08);}
+.mapcard svg{width:100%;height:auto;display:block;}
+.maplegend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;margin-top:10px;color:#5a6f86;}
+.maplegend .l{display:flex;align-items:center;gap:5px;}
+.dot{width:11px;height:11px;border-radius:50%;display:inline-block;}
+.gmap{
+  margin-top:14px;border-radius:14px;overflow:hidden;border:2px solid var(--line);
+}
+.gmap iframe{display:block;width:100%;height:300px;border:0;}
+.gmap-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-top:14px;}
+.gmap-tabs button{
+  appearance:none;cursor:pointer;border:2px solid var(--line);background:#fff;
+  border-radius:999px;padding:6px 13px;font-size:12px;font-weight:700;color:#5a6f86;
+  font-family:'Zen Maru Gothic',sans-serif;
+}
+.gmap-tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+/* ── チェックリスト ── */
+.check{background:var(--card);border-radius:16px;padding:16px 20px;box-shadow:0 2px 8px rgba(30,58,95,.08);}
+.check + .check{margin-top:14px;}
+.check h3{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;
+  margin-bottom:8px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+}
+.check h3 .due{font-size:11px;color:#fff;background:var(--sun);border-radius:999px;padding:2px 10px;font-weight:700;}
+ul.todo{list-style:none;}
+ul.todo label{display:flex;gap:10px;align-items:flex-start;padding:8px 6px;border-radius:8px;font-size:14px;cursor:pointer;}
+ul.todo label:active{background:var(--sky);}
+ul.todo input{
+  appearance:none;width:22px;height:22px;flex:none;margin-top:1px;
+  border:2.5px solid var(--line);border-radius:7px;background:#fff;cursor:pointer;
+  display:grid;place-content:center;transition:all .15s;
+}
+ul.todo input:checked{background:var(--sun);border-color:var(--sun);}
+ul.todo input:checked::before{content:"✓";color:#fff;font-weight:900;font-size:14px;}
+ul.todo input:checked + span{color:#9aacc0;text-decoration:line-through;}
+ul.todo .sub{display:block;font-size:12px;color:#7a8ea3;}
+.progress{font-size:12px;color:#6b7f95;text-align:right;margin-top:4px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;}
+.packgrid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:480px){.packgrid{grid-template-columns:1fr 1fr;}}
+
+/* 列車情報ミニ */
+.traincard{background:linear-gradient(135deg,#2E5FA3,#1E3A5F);color:#fff;border-radius:16px;padding:18px 20px;margin-top:16px;}
+.traincard h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;}
+.tc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+.tc-item{background:rgba(255,255,255,.12);border-radius:10px;padding:9px 12px;}
+.tc-item .k{font-size:11px;opacity:.75;}
+.tc-item .v{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;}
+.stops-mini{margin-top:10px;font-size:12px;opacity:.85;line-height:1.9;}
+
+footer{text-align:center;margin:34px 0 8px;font-size:12px;color:#8ba0b6;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;}
+
+/* ══ こどもワクワク演出 ══ */
+.scene{margin-top:12px;overflow:hidden;}
+.scene svg{width:100%;height:auto;display:block;}
+.train-run{animation:trainrun 14s linear infinite;}
+@keyframes trainrun{
+  0%{transform:translateX(-180px);}
+  100%{transform:translateX(620px);}
+}
+.wheel{transform-origin:center;transform-box:fill-box;animation:spin 1.1s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.cloud1{animation:drift 26s linear infinite;}
+.cloud2{animation:drift 34s linear infinite;animation-delay:-14s;}
+@keyframes drift{0%{transform:translateX(560px);}100%{transform:translateX(-160px);}}
+.puff{animation:puff 2.4s ease-out infinite;opacity:0;}
+.puff.p2{animation-delay:.8s;}
+.puff.p3{animation-delay:1.6s;}
+@keyframes puff{0%{opacity:.85;transform:translate(0,0) scale(.5);}100%{opacity:0;transform:translate(-26px,-22px) scale(1.5);}}
+.sunspin{transform-origin:center;transform-box:fill-box;animation:spin 30s linear infinite;}
+
+.kidstrip{
+  display:flex;justify-content:space-around;align-items:center;
+  background:#FFF8EC;border-radius:12px;padding:8px 6px;margin:2px 0 12px;
+  font-size:30px;
+}
+.kidstrip span{display:inline-block;animation:bounce 2.2s ease-in-out infinite;}
+.kidstrip span:nth-child(2){animation-delay:.2s;}
+.kidstrip span:nth-child(3){animation-delay:.4s;}
+.kidstrip span:nth-child(4){animation-delay:.6s;}
+.kidstrip span:nth-child(5){animation-delay:.8s;}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px) rotate(-4deg);}}
+
+.em{display:inline-block;}
+h2 .em{animation:wiggle 3s ease-in-out infinite;}
+@keyframes wiggle{0%,100%{transform:rotate(0);}25%{transform:rotate(-8deg);}75%{transform:rotate(8deg);}}
+
+ul.todo input:checked{animation:pop .3s ease;}
+@keyframes pop{0%{transform:scale(.7);}60%{transform:scale(1.25);}100%{transform:scale(1);}}
+
+@media(prefers-reduced-motion:reduce){
+  .train-run,.wheel,.cloud1,.cloud2,.puff,.sunspin,.kidstrip span,h2 .em,ul.todo input:checked{animation:none;}
+  .train-run{transform:translateX(160px);}
+  .puff{opacity:0;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="ticket">
+      <h1><small>FAMILY TRIP TICKET</small>徳島帰省のしおり 🚃</h1>
+      <div class="dates">2026年<b>8/10(月)–12(水)</b></div>
+    </div>
+    <div class="scene" aria-hidden="true">
+      <svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg">
+        <!-- おひさま -->
+        <g class="sunspin">
+          <circle cx="472" cy="26" r="13" fill="#FFD25A"/>
+          <g stroke="#FFD25A" stroke-width="3" stroke-linecap="round">
+            <line x1="472" y1="4" x2="472" y2="10"/><line x1="472" y1="42" x2="472" y2="48"/>
+            <line x1="450" y1="26" x2="456" y2="26"/><line x1="488" y1="26" x2="494" y2="26"/>
+            <line x1="457" y1="11" x2="461" y2="15"/><line x1="483" y1="37" x2="487" y2="41"/>
+            <line x1="487" y1="11" x2="483" y2="15"/><line x1="461" y1="37" x2="457" y2="41"/>
+          </g>
+        </g>
+        <!-- くも -->
+        <g class="cloud1" fill="#fff" opacity=".85">
+          <ellipse cx="60" cy="28" rx="26" ry="12"/><ellipse cx="82" cy="24" rx="18" ry="10"/>
+        </g>
+        <g class="cloud2" fill="#fff" opacity=".65">
+          <ellipse cx="40" cy="52" rx="20" ry="9"/><ellipse cx="57" cy="49" rx="13" ry="7"/>
+        </g>
+        <!-- せんろ -->
+        <rect x="0" y="104" width="520" height="4" fill="#fff" opacity=".9" rx="2"/>
+        <g fill="#fff" opacity=".55">
+          <rect x="8" y="110" width="16" height="4" rx="2"/><rect x="48" y="110" width="16" height="4" rx="2"/>
+          <rect x="88" y="110" width="16" height="4" rx="2"/><rect x="128" y="110" width="16" height="4" rx="2"/>
+          <rect x="168" y="110" width="16" height="4" rx="2"/><rect x="208" y="110" width="16" height="4" rx="2"/>
+          <rect x="248" y="110" width="16" height="4" rx="2"/><rect x="288" y="110" width="16" height="4" rx="2"/>
+          <rect x="328" y="110" width="16" height="4" rx="2"/><rect x="368" y="110" width="16" height="4" rx="2"/>
+          <rect x="408" y="110" width="16" height="4" rx="2"/><rect x="448" y="110" width="16" height="4" rx="2"/>
+          <rect x="488" y="110" width="16" height="4" rx="2"/>
+        </g>
+        <!-- にこにこ列車(オリジナル) -->
+        <g class="train-run">
+          <!-- けむり -->
+          <circle class="puff" cx="128" cy="48" r="7" fill="#fff"/>
+          <circle class="puff p2" cx="128" cy="48" r="6" fill="#fff"/>
+          <circle class="puff p3" cx="128" cy="48" r="8" fill="#fff"/>
+          <!-- きゃくしゃ -->
+          <rect x="0" y="66" width="52" height="30" rx="8" fill="#FFD25A"/>
+          <rect x="8" y="73" width="12" height="11" rx="3" fill="#fff"/>
+          <rect x="30" y="73" width="12" height="11" rx="3" fill="#fff"/>
+          <text x="12" y="82" font-size="9">🧒</text><text x="33" y="82" font-size="9">👶</text>
+          <!-- れんけつ -->
+          <rect x="52" y="82" width="10" height="5" fill="#fff" opacity=".8"/>
+          <!-- せんとうしゃりょう -->
+          <rect x="62" y="58" width="66" height="38" rx="10" fill="#4A7FC9"/>
+          <rect x="62" y="58" width="66" height="10" rx="5" fill="#E8552F"/>
+          <!-- おかお -->
+          <circle cx="112" cy="80" r="13" fill="#fff"/>
+          <circle cx="107" cy="78" r="1.8" fill="#1E3A5F"/>
+          <circle cx="117" cy="78" r="1.8" fill="#1E3A5F"/>
+          <path d="M 106 84 Q 112 89 118 84" stroke="#E8552F" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="103" cy="83" r="2.4" fill="#FFB4A0" opacity=".8"/>
+          <circle cx="121" cy="83" r="2.4" fill="#FFB4A0" opacity=".8"/>
+          <!-- まど -->
+          <rect x="70" y="72" width="14" height="12" rx="3" fill="#fff"/>
+          <text x="72" y="82" font-size="9">🐻</text>
+          <!-- しゃりん -->
+          <g class="wheel"><circle cx="76" cy="98" r="7" fill="#1E3A5F"/><line x1="76" y1="92" x2="76" y2="104" stroke="#fff" stroke-width="1.6"/><line x1="70" y1="98" x2="82" y2="98" stroke="#fff" stroke-width="1.6"/></g>
+          <g class="wheel"><circle cx="112" cy="98" r="7" fill="#1E3A5F"/><line x1="112" y1="92" x2="112" y2="104" stroke="#fff" stroke-width="1.6"/><line x1="106" y1="98" x2="118" y2="98" stroke="#fff" stroke-width="1.6"/></g>
+          <g class="wheel"><circle cx="14" cy="98" r="6" fill="#1E3A5F"/><line x1="14" y1="93" x2="14" y2="103" stroke="#fff" stroke-width="1.5"/><line x1="9" y1="98" x2="19" y2="98" stroke="#fff" stroke-width="1.5"/></g>
+          <g class="wheel"><circle cx="40" cy="98" r="6" fill="#1E3A5F"/><line x1="40" y1="93" x2="40" y2="103" stroke="#fff" stroke-width="1.5"/><line x1="35" y1="98" x2="45" y2="98" stroke="#fff" stroke-width="1.5"/></g>
+        </g>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- ── 上部タブバー ── -->
+<nav class="tabbar" aria-label="ページ切替">
+  <div class="inner">
+    <button class="on" data-pane="pane-plan"><span class="ic">📅</span>スケジュール</button>
+    <button data-pane="pane-map"><span class="ic">🗺️</span>マップ</button>
+    <button data-pane="pane-spot"><span class="ic">🔗</span>スポット</button>
+    <button data-pane="pane-prep"><span class="ic">🎒</span>準備</button>
+  </div>
+</nav>
+
+<div class="wrap">
+
+<!-- ══════════ TAB 1: スケジュール ══════════ -->
+<div class="pane active" id="pane-plan">
+
+  <section>
+    <h2><span class="em">👨‍👩‍👧‍👦</span>メンバー</h2>
+    <div class="members">
+      <div class="member">ぼく<span class="tag">大人</span></div>
+      <div class="member">妻<span class="tag">大人</span></div>
+      <div class="member">姉(3歳)<span class="tag kids">こども</span></div>
+      <div class="member">弟(1歳)<span class="tag kids">ひざの上</span></div>
+      <div class="member">じぃじ<span class="tag toku">送迎担当🚗</span></div>
+      <div class="member">ばぁば<span class="tag toku">徳島の母</span></div>
+    </div>
+  </section>
+
+  <div class="subtabs" id="dayTabs" role="tablist" aria-label="日付切替">
+    <button class="on" data-day="day1">8/10<small>月・移動日</small></button>
+    <button data-day="day2">8/11<small>火・列車の日</small></button>
+    <button data-day="day3">8/12<small>水・最終日</small></button>
+  </div>
+
+  <div class="subpane active" id="day1">
+  <section>
+    <h2><span class="em">🌙</span>1日目 — 大阪から徳島へ</h2>
+    <div class="daycard">
+      <div class="dayhead"><span class="d">8/10</span><span class="w">(月)</span><span class="t">夜の車移動</span></div>
+      <div class="simple"><span class="time">20:00</span><p>大阪を車で出発 🚗<br><span style="font-size:13px;color:#5a6f86;">子どもたちは車で寝かせる作戦。途中休憩1回</span></p></div>
+      <div class="simple"><span class="time">22:30<br>ごろ</span><p>実家(徳島市入田町)に到着。そのままおやすみ 💤</p></div>
+      <div class="note"><b>💡 出発前に:</b> チャイルドシート2台の装着確認・車内おやつと飲み物・ETC/ガソリン</div>
+    </div>
+  </section>
+  </div><!-- /day1 -->
+
+  <div class="subpane" id="day2">
+  <section>
+    <h2><span class="em">🚃</span>2日目 — アンパンマン列車の日！</h2>
+    <div class="daycard">
+      <div class="dayhead"><span class="d">8/11</span><span class="w">(火)</span><span class="t">じぃじ送迎プラン</span></div>
+      <div class="kidstrip" aria-hidden="true"><span>🚃</span><span>🍚</span><span>🎪</span><span>🍞</span><span>🎉</span></div>
+      <div class="rail">
+        <div class="stop">
+          <div class="time">10:00ごろ</div>
+          <div class="what">実家を出発 → 箸蔵とことんへ <span class="chip car">じぃじの車</span></div>
+          <div class="memo">入田町から阿波池田方面へ約1.5時間。じぃじの運転で全員移動</div>
+        </div>
+        <div class="stop">
+          <div class="time">お昼</div>
+          <div class="what">箸蔵とことんでランチ 🍚</div>
+          <div class="memo">定食(★4.31)を食べたら、子供ひろばでひと遊び。14時すぎに阿波池田駅へ</div>
+        </div>
+        <div class="stop major">
+          <div class="time">14:30</div>
+          <div class="what">阿波池田駅 発 <span class="chip train">剣山6号</span></div>
+          <div class="memo">乗るのは ぼく・妻・姉・弟(膝上)・ばぁば の5人。<br>🚗 じぃじはここから車で徳島へ先回り</div>
+        </div>
+        <div class="stop major">
+          <div class="time">15:51</div>
+          <div class="what">徳島駅 着 → じぃじがお迎え 🎉</div>
+          <div class="memo">約1時間20分の列車旅。プレイルームで遊びながら</div>
+        </div>
+        <div class="stop">
+          <div class="time">夜</div>
+          <div class="what">くいものや 柚 石井店 で夕食 🍻</div>
+          <div class="memo">18時開店・石井町。<b style="color:var(--sun);">お盆営業ありだが要早め予約</b></div>
+        </div>
+      </div>
+      <div class="note green"><b>🚗 じぃじの動き:</b> 実家→とことん(送り)→阿波池田で見送り→車で徳島へ→徳島駅でお迎え→夜は柚へ。1日ありがとうじぃじ!</div>
+    </div>
+
+    <div class="traincard">
+      <h3>🚃 剣山6号 ゆうゆうアンパンマンカー</h3>
+      <div class="kidstrip" aria-hidden="true" style="background:rgba(255,255,255,.15);"><span>🚂</span><span>💨</span><span>🎠</span><span>📖</span><span>⭐</span></div>
+      <div class="tc-grid">
+        <div class="tc-item"><div class="k">出発</div><div class="v">阿波池田 14:30</div></div>
+        <div class="tc-item"><div class="k">到着</div><div class="v">徳島 15:51</div></div>
+        <div class="tc-item"><div class="k">座席</div><div class="v">2号車 指定席</div></div>
+        <div class="tc-item"><div class="k">人数</div><div class="v">大人3・子供1<br><span style="font-size:11px;font-weight:400;">(弟はひざの上)</span></div></div>
+      </div>
+      <div class="stops-mini">途中停車: 阿波加茂 14:41 → 貞光 14:53 → 穴吹 15:06 → 阿波山川 15:15 → 阿波川島 15:24 → 鴨島 15:29 → 石井 15:40 → 蔵本 15:47</div>
+    </div>
+  </section>
+  </div><!-- /day2 -->
+
+  <div class="subpane" id="day3">
+  <section>
+    <h2><span class="em">🏮</span>3日目 — 阿波踊り&大阪へ</h2>
+    <div class="daycard">
+      <div class="dayhead"><span class="d">8/12</span><span class="w">(水)</span><span class="t">最終日</span></div>
+      <div class="rail">
+        <div class="stop">
+          <div class="time">午前〜昼</div>
+          <div class="what">阿波踊りの公演を見に行く 🏮 <span class="chip car">車</span></div>
+          <div class="memo"><b style="color:var(--sun);">候補: フジグラン石井 or フジグラン北島</b>。お盆時期は商業施設で連の公演があることが多い。<br>⚠️ 開催有無・時間は<b>直前に要チェック</b>(なければ実家でのんびりに切替)</div>
+        </div>
+        <div class="stop">
+          <div class="time">夕方</div>
+          <div class="what">実家でゆっくり過ごす 🏠</div>
+          <div class="memo">子どもたちのお昼寝&帰り支度。じぃじ・ばぁばとの時間</div>
+        </div>
+        <div class="stop major">
+          <div class="time">18:00</div>
+          <div class="what">大阪へ向けて出発 🚗</div>
+          <div class="memo">淡路経由で約2.5〜3時間。子どもたちは車で夕寝作戦</div>
+        </div>
+        <div class="stop">
+          <div class="time">21:00<br>ごろ</div>
+          <div class="what">大阪の自宅に到着 🌙 おつかれさま!</div>
+          <div class="memo">渋滞状況しだい。お盆の帰阪ラッシュに注意</div>
+        </div>
+      </div>
+      <div class="note"><b>💡 出発前に:</b> 忘れ物チェック(充電器・おもちゃ)・ガソリン残量・トイレ&おむつ替えを済ませてから乗車</div>
+    </div>
+  </section>
+  </div><!-- /day3 -->
+</div>
+
+<!-- ══════════ TAB 2: マップ ══════════ -->
+<div class="pane" id="pane-map">
+  <section>
+    <h2><span class="em">🗺️</span>移動マップ</h2>
+    <div class="mapcard">
+      <svg viewBox="0 0 520 330" role="img" aria-label="徳島の移動マップ">
+        <!-- 吉野川 -->
+        <path d="M 20 150 C 110 130, 200 155, 300 140 S 470 120, 505 105" fill="none" stroke="#BBDCF2" stroke-width="22" stroke-linecap="round"/>
+        <path d="M 20 150 C 110 130, 200 155, 300 140 S 470 120, 505 105" fill="none" stroke="#7FB5E0" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round"/>
+        <text x="235" y="128" font-size="12" fill="#5D93BE" font-weight="bold">吉野川</text>
+
+        <!-- 鮎喰川(実家方面) -->
+        <path d="M 430 122 C 415 170, 400 210, 380 250" fill="none" stroke="#BBDCF2" stroke-width="10" stroke-linecap="round"/>
+
+        <!-- 車ルート(緑破線): 実家→とことん -->
+        <path d="M 385 258 C 300 275, 140 250, 70 175" fill="none" stroke="#3E8E5A" stroke-width="4" stroke-dasharray="8 7" stroke-linecap="round"/>
+        <text x="175" y="288" font-size="12" fill="#3E8E5A" font-weight="bold">🚗 じぃじの車で とことんへ(約1.5h)</text>
+
+        <!-- 列車ルート(青実線): 阿波池田→徳島 -->
+        <path d="M 62 148 C 160 168, 300 150, 470 108" fill="none" stroke="#2E5FA3" stroke-width="5" stroke-linecap="round"/>
+        <text x="185" y="185" font-size="12" fill="#2E5FA3" font-weight="bold">🚃 剣山6号 14:30→15:51</text>
+
+        <!-- スポット -->
+        <!-- とことん -->
+        <circle cx="55" cy="112" r="10" fill="#3E8E5A" stroke="#fff" stroke-width="3"/>
+        <text x="45" y="95" font-size="13" font-weight="bold" fill="#1E3A5F">🍚 箸蔵とことん</text>
+        <!-- 阿波池田駅 -->
+        <circle cx="62" cy="148" r="10" fill="#E8552F" stroke="#fff" stroke-width="3"/>
+        <text x="78" y="152" font-size="13" font-weight="bold" fill="#1E3A5F">阿波池田駅</text>
+        <!-- 石井(柚) -->
+        <circle cx="400" cy="120" r="9" fill="#B0491F" stroke="#fff" stroke-width="3"/>
+        <text x="330" y="98" font-size="13" font-weight="bold" fill="#1E3A5F">🍻 柚 石井店</text>
+        <!-- 徳島駅 -->
+        <circle cx="470" cy="108" r="10" fill="#E8552F" stroke="#fff" stroke-width="3"/>
+        <text x="440" y="88" font-size="13" font-weight="bold" fill="#1E3A5F">徳島駅</text>
+        <!-- 実家 -->
+        <circle cx="388" cy="258" r="11" fill="#2E5FA3" stroke="#fff" stroke-width="3"/>
+        <text x="404" y="263" font-size="13" font-weight="bold" fill="#1E3A5F">🏠 実家</text>
+        <text x="404" y="279" font-size="11" fill="#5a6f86">徳島市入田町</text>
+
+        <!-- 方位 -->
+        <text x="20" y="320" font-size="11" fill="#8ba0b6">← 西(山のほう)</text>
+        <text x="430" y="320" font-size="11" fill="#8ba0b6">東(海のほう) →</text>
+      </svg>
+      <div class="maplegend">
+        <span class="l"><span class="dot" style="background:#3E8E5A;"></span>車(じぃじ)</span>
+        <span class="l"><span class="dot" style="background:#2E5FA3;"></span>アンパンマン列車</span>
+        <span class="l"><span class="dot" style="background:#E8552F;"></span>駅</span>
+      </div>
+
+      <div class="gmap-tabs" id="gmapTabs">
+        <button class="on" data-q="徳島市入田町">🏠 実家周辺</button>
+        <button data-q="地域交流拠点 箸蔵とことん 三好市">🍚 とことん</button>
+        <button data-q="阿波池田駅">🚉 阿波池田駅</button>
+        <button data-q="くいものや柚 石井店 徳島県名西郡石井町">🍻 柚 石井店</button>
+        <button data-q="フジグラン石井">🏮 フジグラン石井</button>
+        <button data-q="フジグラン北島">🏮 フジグラン北島</button>
+      </div>
+      <div class="gmap">
+        <iframe id="gmapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          src="https://maps.google.com/maps?q=%E5%BE%B3%E5%B3%B6%E5%B8%82%E5%85%A5%E7%94%B0%E7%94%BA&z=12&output=embed"></iframe>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════ TAB 3: スポット情報 ══════════ -->
+<div class="pane" id="pane-spot">
+  <section>
+    <h2><span class="em">🔗</span>スポット情報</h2>
+
+    <div class="linkcard">
+      <div class="lc-hero train">
+        <span class="big">🚃</span>
+        <div class="name"><small>JR四国・徳島線</small>ゆうゆうアンパンマンカー<br>(剣山6号)</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-facts">
+          <span class="f"><span class="k">区間</span>阿波池田 14:30 → 徳島 15:51</span>
+          <span class="f"><span class="k">座席</span>2号車・全席指定</span>
+        </div>
+        <div class="lc-desc">車内にプレイルームあり。姉も弟もここで遊べるはず。予約はe5489で乗車1ヶ月前(7/11)から。</div>
+        <div class="lc-btns">
+          <a class="primary" href="https://www.jr-eki.com/aptrain/naani/yuyu/train.html" target="_blank" rel="noopener">🚃 車両紹介ページ</a>
+          <a class="map" href="https://e5489.jr-odekake.net/" target="_blank" rel="noopener">🎫 e5489で予約</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="linkcard">
+      <div class="lc-hero teishoku">
+        <span class="big">🍚</span>
+        <div class="name"><small>ランチ&子供ひろば</small>地域交流拠点 箸蔵とことん</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-facts">
+          <span class="f"><span class="star">★4.31</span></span>
+          <span class="f"><span class="k">場所</span>三好市(箸蔵駅 徒歩約21分)</span>
+          <span class="f"><span class="k">タイプ</span>定食屋・産直市</span>
+        </div>
+        <div class="kidstrip" aria-hidden="true"><span>🍚</span><span>🐟</span><span>🥗</span><span>🍞</span><span>🥕</span></div>
+        <div class="lc-desc">イベント開催や産直市、パン販売もある地域交流拠点。子供ひろばがあるので食後に子どもたちを遊ばせられる。</div>
+        <div class="lc-btns">
+          <a class="primary" href="https://tocoton.jp/" target="_blank" rel="noopener">🌐 公式サイト</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%B8%E8%94%B5%E3%81%A8%E3%81%93%E3%81%A8%E3%82%93+%E4%B8%89%E5%A5%BD%E5%B8%82" target="_blank" rel="noopener">📍 地図を開く</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="linkcard">
+      <div class="lc-hero izakaya">
+        <span class="big">🍻</span>
+        <div class="name"><small>8/11 夜ごはん</small>くいものや 柚 石井店</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-facts">
+          <span class="f"><span class="star">★3.45</span></span>
+          <span class="f"><span class="k">営業</span>18:00〜翌1:00</span>
+          <span class="f"><span class="k">場所</span>石井町高川原(駐車場あり・個室あり)</span>
+        </div>
+        <div class="kidstrip" aria-hidden="true"><span>🍗</span><span>🍤</span><span>🍙</span><span>🥟</span><span>🍧</span></div>
+        <div class="lc-desc">創作系の居酒屋。阿波尾鶏の焼き物やチキン南蛮が評判。お盆も営業予定だけど席が埋まりやすいので早めの電話予約を。</div>
+        <div class="lc-btns">
+          <a class="tabelog" href="https://tabelog.com/tokushima/A3603/A360303/36004572/" target="_blank" rel="noopener">🍴 食べログ</a>
+          <a class="tel" href="tel:0886740667">📞 電話で予約</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%84%E3%82%82%E3%81%AE%E3%82%84%E6%9F%9A+%E7%9F%B3%E4%BA%95%E5%BA%97" target="_blank" rel="noopener">📍 地図</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</div>
+
+<!-- ══════════ TAB 4: 準備 ══════════ -->
+<div class="pane" id="pane-prep">
+  <section>
+    <h2><span class="em">📋</span>出発までにやること</h2>
+    <div class="check">
+      <h3>🎫 予約・確認 <span class="due">7/11 予約開始!</span></h3>
+      <ul class="todo" data-list>
+        <li><label><input type="checkbox"><span>アンパンマンカーの指定席予約(e5489)<span class="sub">乗車1ヶ月前の7/11から。2号車4・5列目が狙い目 → ばぁば担当</span></span></label></li>
+        <li><label><input type="checkbox"><span>くいものや 柚 石井店を電話予約 (088-674-0667)<span class="sub">お盆営業あり。早めに席をおさえる</span></span></label></li>
+        <li><label><input type="checkbox"><span>じぃじに送迎プランを共有<span class="sub">とことん送り→池田で見送り→徳島駅お迎え、の流れをLINEで確認</span></span></label></li>
+        <li><label><input type="checkbox"><span>とことんの8/11営業を確認<span class="sub">お盆時期の営業時間・子供ひろばの利用可否</span></span></label></li>
+        <li><label><input type="checkbox"><span>【直前】8/12の阿波踊り公演を調べる<span class="sub">フジグラン石井 or フジグラン北島。開催有無と時間をチェック(8/10ごろ)</span></span></label></li>
+      </ul>
+      <div class="progress" data-progress>0 / 5 完了</div>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="em">🎒</span>帰省の準備一覧</h2>
+    <div class="packgrid">
+      <div class="check">
+        <h3>👶 子どもグッズ</h3>
+        <ul class="todo" data-list>
+          <li><label><input type="checkbox"><span>おむつ・おしりふき(多めに)</span></label></li>
+          <li><label><input type="checkbox"><span>着替え(2人×2〜3セット)</span></label></li>
+          <li><label><input type="checkbox"><span>抱っこ紐(列車&とことん用)</span></label></li>
+          <li><label><input type="checkbox"><span>母子手帳・保険証・医療証</span></label></li>
+          <li><label><input type="checkbox"><span>お気に入りのおもちゃ・絵本</span></label></li>
+          <li><label><input type="checkbox"><span>マグ・ストローボトル</span></label></li>
+        </ul>
+      </div>
+      <div class="check">
+        <h3>🚗 車内・移動対策</h3>
+        <ul class="todo" data-list>
+          <li><label><input type="checkbox"><span>チャイルドシート×2 装着確認</span></label></li>
+          <li><label><input type="checkbox"><span>車内おやつ・飲み物</span></label></li>
+          <li><label><input type="checkbox"><span>ブランケット(夜の車内用)</span></label></li>
+          <li><label><input type="checkbox"><span>充電ケーブル・モバイルバッテリー</span></label></li>
+          <li><label><input type="checkbox"><span>ETCカード・ガソリン満タン</span></label></li>
+        </ul>
+      </div>
+      <div class="check">
+        <h3>☀️ 夏の対策</h3>
+        <ul class="todo" data-list>
+          <li><label><input type="checkbox"><span>帽子(全員分)</span></label></li>
+          <li><label><input type="checkbox"><span>日焼け止め</span></label></li>
+          <li><label><input type="checkbox"><span>虫よけ・かゆみ止め</span></label></li>
+          <li><label><input type="checkbox"><span>保冷剤・冷感タオル</span></label></li>
+        </ul>
+      </div>
+      <div class="check">
+        <h3>👜 おとなの持ち物</h3>
+        <ul class="todo" data-list>
+          <li><label><input type="checkbox"><span>財布・免許証</span></label></li>
+          <li><label><input type="checkbox"><span>予約確認(e5489)のスクショ</span></label></li>
+          <li><label><input type="checkbox"><span>常備薬</span></label></li>
+          <li><label><input type="checkbox"><span>実家へのおみやげ</span></label></li>
+          <li><label><input type="checkbox"><span>スマホ容量の確保 📷</span></label></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>たのしい帰省になりますように 🍞✨</footer>
+</div>
+
+</div><!-- /wrap -->
+
+<script>
+// タブ切替
+var tabs = document.querySelectorAll('nav.tabbar button');
+tabs.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    tabs.forEach(function(b){ b.classList.remove('on'); });
+    document.querySelectorAll('.pane').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('on');
+    document.getElementById(btn.dataset.pane).classList.add('active');
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+});
+
+// 日付サブタブ切替
+var dtabs = document.querySelectorAll('#dayTabs button');
+dtabs.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    dtabs.forEach(function(b){ b.classList.remove('on'); });
+    document.querySelectorAll('.subpane').forEach(function(p){ p.classList.remove('active'); });
+    btn.classList.add('on');
+    document.getElementById(btn.dataset.day).classList.add('active');
+  });
+});
+
+// Googleマップ切替
+var gtabs = document.querySelectorAll('#gmapTabs button');
+var gframe = document.getElementById('gmapFrame');
+gtabs.forEach(function(btn){
+  btn.addEventListener('click', function(){
+    gtabs.forEach(function(b){ b.classList.remove('on'); });
+    btn.classList.add('on');
+    gframe.src = 'https://maps.google.com/maps?q=' + encodeURIComponent(btn.dataset.q) + '&z=13&output=embed';
+  });
+});
+
+// チェックリスト進捗
+document.querySelectorAll('[data-list]').forEach(function(list){
+  var card = list.closest('.check');
+  var prog = card ? card.querySelector('[data-progress]') : null;
+  list.addEventListener('change', function(){
+    if(!prog) return;
+    prog.textContent = list.querySelectorAll('input:checked').length + ' / ' + list.querySelectorAll('input').length + ' 完了';
+  });
+});
+</script>
+</body>
+</html>
