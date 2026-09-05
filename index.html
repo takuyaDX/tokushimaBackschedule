@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="referrer" content="no-referrer">
-<title>徳島帰省のしおり 8/10–8/11</title>
+<title>2家族旅のしおり 10/3–10/4｜THE森将軍＆おもちゃ王国</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -36,7 +36,7 @@ body{
 
 /* ── ヘッダー：切符風(コンパクト) ── */
 header{
-  background:var(--blue);color:#fff;padding:16px 0 14px;
+  background:var(--green);color:#fff;padding:16px 0 14px;
   position:relative;
 }
 header::after{
@@ -51,7 +51,7 @@ header::after{
 }
 .ticket::before,.ticket::after{
   content:"";position:absolute;top:50%;width:18px;height:18px;
-  background:var(--blue);border-radius:50%;transform:translateY(-50%);
+  background:var(--green);border-radius:50%;transform:translateY(-50%);
 }
 .ticket::before{left:-9px;}
 .ticket::after{right:-9px;}
@@ -64,7 +64,7 @@ h1 small{display:block;font-size:11px;color:var(--sun);font-weight:700;letter-sp
   font-family:'Zen Maru Gothic',sans-serif;font-weight:700;
   font-size:12px;text-align:right;color:#6b7f95;white-space:nowrap;
 }
-.ticket .dates b{display:block;font-size:15px;color:var(--blue);}
+.ticket .dates b{display:block;font-size:15px;color:var(--green);}
 
 /* ── タブ本体 ── */
 .pane{display:none;animation:fadein .25s ease;}
@@ -84,7 +84,7 @@ h2 .em{font-size:21px;}
   position:sticky;top:54px;z-index:30;
   background:linear-gradient(var(--sky) 82%,rgba(234,243,251,0));
   padding:12px 0 10px;margin-top:8px;
-  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  display:grid;grid-template-columns:repeat(2,1fr);gap:8px;
 }
 .subtabs button{
   appearance:none;cursor:pointer;border:2px solid var(--line);background:#fff;
@@ -129,12 +129,18 @@ nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3p
 .member .tag{font-size:10px;font-weight:700;color:#fff;background:var(--blue);border-radius:999px;padding:1px 7px;}
 .member .tag.kids{background:var(--sun);}
 .member .tag.toku{background:var(--green);}
+.famlabel{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:13px;
+  color:#6b7f95;margin:14px 0 6px;
+}
+.famlabel:first-of-type{margin-top:0;}
 
 /* ── デイカード ── */
 .daycard{
   background:var(--card);border-radius:16px;padding:18px 20px;
   box-shadow:0 2px 8px rgba(30,58,95,.08);
 }
+.daycard + .daycard{margin-top:16px;}
 .dayhead{
   display:flex;align-items:baseline;gap:10px;margin-bottom:12px;
   font-family:'Zen Maru Gothic',sans-serif;
@@ -153,27 +159,31 @@ nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3p
 .note b{color:var(--sun);}
 .note.green{background:var(--green-soft);}
 .note.green b{color:var(--green);}
+.note.blue{background:#E3ECF7;}
+.note.blue b{color:var(--blue);}
 
 /* ── 路線図タイムライン ── */
 .rail{position:relative;margin:6px 0 0 6px;padding-left:30px;}
 .rail::before{
   content:"";position:absolute;left:8px;top:10px;bottom:10px;width:6px;
-  background:var(--blue);border-radius:3px;
+  background:var(--green);border-radius:3px;
 }
 .stop{position:relative;padding:0 0 24px;}
 .stop:last-child{padding-bottom:0;}
 .stop::before{
   content:"";position:absolute;left:-27px;top:6px;width:16px;height:16px;
-  background:#fff;border:4px solid var(--blue);border-radius:50%;
+  background:#fff;border:4px solid var(--green);border-radius:50%;
 }
 .stop.major::before{border-color:var(--sun);width:18px;height:18px;left:-28px;top:5px;}
-.stop .time{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;color:var(--blue);}
+.stop .time{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:16px;color:var(--green);}
 .stop.major .time{color:var(--sun);}
 .stop .what{font-weight:700;font-size:15px;}
 .stop .memo{font-size:13px;color:#5a6f86;margin-top:2px;}
 .chip{display:inline-block;font-size:11px;font-weight:700;border-radius:6px;padding:1px 8px;margin-left:6px;vertical-align:2px;}
 .chip.car{background:var(--green-soft);color:var(--green);}
 .chip.train{background:#E3ECF7;color:var(--blue);}
+.chip.play{background:var(--sun-soft);color:var(--sun);}
+.chip.meal{background:#FFF3E8;color:#C75B00;}
 
 /* ── リッチリンクカード ── */
 .linkcard{
@@ -187,9 +197,10 @@ nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3p
 .lc-hero .big{font-size:40px;filter:drop-shadow(0 2px 2px rgba(0,0,0,.2));}
 .lc-hero .name{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:17px;line-height:1.3;}
 .lc-hero .name small{display:block;font-size:11px;font-weight:700;opacity:.85;letter-spacing:.08em;}
-.lc-hero.train{background:linear-gradient(120deg,#2E5FA3,#4A7FC9 60%,#E8552F 145%);}
-.lc-hero.teishoku{background:linear-gradient(120deg,#3E8E5A,#66AE7E);}
-.lc-hero.izakaya{background:linear-gradient(120deg,#B0491F,#E8552F);}
+.lc-hero.cabin{background:linear-gradient(120deg,#2C6B47,#5FA87A 70%,#E8A02F 150%);}
+.lc-hero.park{background:linear-gradient(120deg,#E8552F,#F09A3E);}
+.lc-hero.lunch{background:linear-gradient(120deg,#2E5FA3,#4A7FC9);}
+.lc-hero.rentacar{background:linear-gradient(120deg,#1E3A5F,#4A7FC9);}
 .lc-body{padding:14px 20px 16px;}
 .lc-facts{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:13px;margin-bottom:10px;}
 .lc-facts .f{display:flex;gap:5px;align-items:baseline;}
@@ -203,7 +214,7 @@ nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3p
   padding:9px 8px;border-radius:10px;transition:transform .1s;
 }
 .lc-btns a:active{transform:scale(.96);}
-.lc-btns a.primary{background:var(--blue);color:#fff;}
+.lc-btns a.primary{background:var(--green);color:#fff;}
 .lc-btns a.tabelog{background:#FFF3E8;color:#C75B00;border:1.5px solid #F0C9A0;}
 .lc-btns a.map{background:var(--sky);color:var(--blue);border:1.5px solid var(--line);}
 .lc-btns a.tel{background:var(--green-soft);color:var(--green);border:1.5px solid #BADCC7;}
@@ -214,6 +225,11 @@ nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3p
 .maplegend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;margin-top:10px;color:#5a6f86;}
 .maplegend .l{display:flex;align-items:center;gap:5px;}
 .dot{width:11px;height:11px;border-radius:50%;display:inline-block;}
+.routebtn{
+  display:block;margin-top:14px;text-align:center;text-decoration:none;
+  background:var(--blue);color:#fff;border-radius:12px;padding:12px 8px;
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;
+}
 .gmap{
   margin-top:14px;border-radius:14px;overflow:hidden;border:2px solid var(--line);
 }
@@ -225,6 +241,15 @@ nav.tabbar button:focus-visible{outline:3px solid var(--blue);outline-offset:-3p
   font-family:'Zen Maru Gothic',sans-serif;
 }
 .gmap-tabs button.on{background:var(--blue);border-color:var(--blue);color:#fff;}
+
+/* ── 移動時間サマリ ── */
+.legcard{background:linear-gradient(135deg,#2C6B47,#1E3A5F);color:#fff;border-radius:16px;padding:18px 20px;margin-top:16px;}
+.legcard h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;}
+.tc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
+.tc-item{background:rgba(255,255,255,.12);border-radius:10px;padding:9px 12px;}
+.tc-item .k{font-size:11px;opacity:.75;}
+.tc-item .v{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;}
+.stops-mini{margin-top:10px;font-size:12px;opacity:.85;line-height:1.9;}
 
 /* ── チェックリスト ── */
 .check{background:var(--card);border-radius:16px;padding:16px 20px;box-shadow:0 2px 8px rgba(30,58,95,.08);}
@@ -250,23 +275,14 @@ ul.todo .sub{display:block;font-size:12px;color:#7a8ea3;}
 .packgrid{display:grid;grid-template-columns:1fr;gap:14px;}
 @media(min-width:480px){.packgrid{grid-template-columns:1fr 1fr;}}
 
-/* 列車情報ミニ */
-.traincard{background:linear-gradient(135deg,#2E5FA3,#1E3A5F);color:#fff;border-radius:16px;padding:18px 20px;margin-top:16px;}
-.traincard h3{font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;}
-.tc-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px;}
-.tc-item{background:rgba(255,255,255,.12);border-radius:10px;padding:9px 12px;}
-.tc-item .k{font-size:11px;opacity:.75;}
-.tc-item .v{font-family:'Zen Maru Gothic',sans-serif;font-weight:700;font-size:14px;}
-.stops-mini{margin-top:10px;font-size:12px;opacity:.85;line-height:1.9;}
-
 footer{text-align:center;margin:34px 0 8px;font-size:12px;color:#8ba0b6;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;}
 
 /* ══ こどもワクワク演出 ══ */
 .scene{margin-top:12px;overflow:hidden;}
 .scene svg{width:100%;height:auto;display:block;}
-.train-run{animation:trainrun 14s linear infinite;}
-@keyframes trainrun{
-  0%{transform:translateX(-180px);}
+.car-run{animation:carrun 15s linear infinite;}
+@keyframes carrun{
+  0%{transform:translateX(-170px);}
   100%{transform:translateX(620px);}
 }
 .wheel{transform-origin:center;transform-box:fill-box;animation:spin 1.1s linear infinite;}
@@ -274,10 +290,14 @@ footer{text-align:center;margin:34px 0 8px;font-size:12px;color:#8ba0b6;font-fam
 .cloud1{animation:drift 26s linear infinite;}
 .cloud2{animation:drift 34s linear infinite;animation-delay:-14s;}
 @keyframes drift{0%{transform:translateX(560px);}100%{transform:translateX(-160px);}}
-.puff{animation:puff 2.4s ease-out infinite;opacity:0;}
-.puff.p2{animation-delay:.8s;}
-.puff.p3{animation-delay:1.6s;}
-@keyframes puff{0%{opacity:.85;transform:translate(0,0) scale(.5);}100%{opacity:0;transform:translate(-26px,-22px) scale(1.5);}}
+.leaf{animation:fall 7s linear infinite;}
+.leaf.l2{animation-delay:2.3s;}
+.leaf.l3{animation-delay:4.6s;}
+@keyframes fall{
+  0%{opacity:0;transform:translate(0,-10px) rotate(0);}
+  15%{opacity:1;}
+  100%{opacity:0;transform:translate(-30px,70px) rotate(220deg);}
+}
 .sunspin{transform-origin:center;transform-box:fill-box;animation:spin 30s linear infinite;}
 
 .kidstrip{
@@ -300,9 +320,9 @@ ul.todo input:checked{animation:pop .3s ease;}
 @keyframes pop{0%{transform:scale(.7);}60%{transform:scale(1.25);}100%{transform:scale(1);}}
 
 @media(prefers-reduced-motion:reduce){
-  .train-run,.wheel,.cloud1,.cloud2,.puff,.sunspin,.kidstrip span,h2 .em,ul.todo input:checked{animation:none;}
-  .train-run{transform:translateX(160px);}
-  .puff{opacity:0;}
+  .car-run,.wheel,.cloud1,.cloud2,.leaf,.sunspin,.kidstrip span,h2 .em,ul.todo input:checked{animation:none;}
+  .car-run{transform:translateX(180px);}
+  .leaf{opacity:0;}
 }
 </style>
 </head>
@@ -311,70 +331,75 @@ ul.todo input:checked{animation:pop .3s ease;}
 <header>
   <div class="wrap">
     <div class="ticket">
-      <h1><small>FAMILY TRIP TICKET</small>徳島帰省のしおり 🚃</h1>
-      <div class="dates">2026年<b>8/10(月)–12(水)</b></div>
+      <h1><small>2 FAMILY TRIP TICKET</small>2家族旅のしおり 🚗</h1>
+      <div class="dates">2026年<b>10/3(土)–4(日)</b></div>
     </div>
     <div class="scene" aria-hidden="true">
       <svg viewBox="0 0 520 120" xmlns="http://www.w3.org/2000/svg">
         <!-- おひさま -->
         <g class="sunspin">
-          <circle cx="472" cy="26" r="13" fill="#FFD25A"/>
+          <circle cx="472" cy="24" r="13" fill="#FFD25A"/>
           <g stroke="#FFD25A" stroke-width="3" stroke-linecap="round">
-            <line x1="472" y1="4" x2="472" y2="10"/><line x1="472" y1="42" x2="472" y2="48"/>
-            <line x1="450" y1="26" x2="456" y2="26"/><line x1="488" y1="26" x2="494" y2="26"/>
-            <line x1="457" y1="11" x2="461" y2="15"/><line x1="483" y1="37" x2="487" y2="41"/>
-            <line x1="487" y1="11" x2="483" y2="15"/><line x1="461" y1="37" x2="457" y2="41"/>
+            <line x1="472" y1="2" x2="472" y2="8"/><line x1="472" y1="40" x2="472" y2="46"/>
+            <line x1="450" y1="24" x2="456" y2="24"/><line x1="488" y1="24" x2="494" y2="24"/>
+            <line x1="457" y1="9" x2="461" y2="13"/><line x1="483" y1="35" x2="487" y2="39"/>
+            <line x1="487" y1="9" x2="483" y2="13"/><line x1="461" y1="35" x2="457" y2="39"/>
           </g>
         </g>
         <!-- くも -->
         <g class="cloud1" fill="#fff" opacity=".85">
-          <ellipse cx="60" cy="28" rx="26" ry="12"/><ellipse cx="82" cy="24" rx="18" ry="10"/>
+          <ellipse cx="60" cy="26" rx="26" ry="12"/><ellipse cx="82" cy="22" rx="18" ry="10"/>
         </g>
-        <g class="cloud2" fill="#fff" opacity=".65">
-          <ellipse cx="40" cy="52" rx="20" ry="9"/><ellipse cx="57" cy="49" rx="13" ry="7"/>
+        <g class="cloud2" fill="#fff" opacity=".6">
+          <ellipse cx="40" cy="50" rx="20" ry="9"/><ellipse cx="57" cy="47" rx="13" ry="7"/>
         </g>
-        <!-- せんろ -->
-        <rect x="0" y="104" width="520" height="4" fill="#fff" opacity=".9" rx="2"/>
-        <g fill="#fff" opacity=".55">
-          <rect x="8" y="110" width="16" height="4" rx="2"/><rect x="48" y="110" width="16" height="4" rx="2"/>
-          <rect x="88" y="110" width="16" height="4" rx="2"/><rect x="128" y="110" width="16" height="4" rx="2"/>
-          <rect x="168" y="110" width="16" height="4" rx="2"/><rect x="208" y="110" width="16" height="4" rx="2"/>
-          <rect x="248" y="110" width="16" height="4" rx="2"/><rect x="288" y="110" width="16" height="4" rx="2"/>
-          <rect x="328" y="110" width="16" height="4" rx="2"/><rect x="368" y="110" width="16" height="4" rx="2"/>
-          <rect x="408" y="110" width="16" height="4" rx="2"/><rect x="448" y="110" width="16" height="4" rx="2"/>
-          <rect x="488" y="110" width="16" height="4" rx="2"/>
+        <!-- もり(木) -->
+        <g opacity=".9">
+          <rect x="36" y="86" width="6" height="16" fill="#8B5E3C"/>
+          <circle cx="39" cy="78" r="16" fill="#4E9A6B"/><circle cx="28" cy="84" r="11" fill="#5FA87A"/><circle cx="50" cy="84" r="11" fill="#5FA87A"/>
+          <rect x="176" y="90" width="5" height="12" fill="#8B5E3C"/>
+          <circle cx="178" cy="83" r="12" fill="#3E8E5A"/><circle cx="169" cy="88" r="8" fill="#5FA87A"/>
+          <rect x="330" y="88" width="6" height="14" fill="#8B5E3C"/>
+          <circle cx="333" cy="80" r="14" fill="#4E9A6B"/><circle cx="345" cy="86" r="9" fill="#5FA87A"/>
+          <rect x="440" y="90" width="5" height="12" fill="#8B5E3C"/>
+          <circle cx="442" cy="83" r="11" fill="#3E8E5A"/>
         </g>
-        <!-- にこにこ列車(オリジナル) -->
-        <g class="train-run">
-          <!-- けむり -->
-          <circle class="puff" cx="128" cy="48" r="7" fill="#fff"/>
-          <circle class="puff p2" cx="128" cy="48" r="6" fill="#fff"/>
-          <circle class="puff p3" cx="128" cy="48" r="8" fill="#fff"/>
-          <!-- きゃくしゃ -->
-          <rect x="0" y="66" width="52" height="30" rx="8" fill="#FFD25A"/>
-          <rect x="8" y="73" width="12" height="11" rx="3" fill="#fff"/>
-          <rect x="30" y="73" width="12" height="11" rx="3" fill="#fff"/>
-          <text x="12" y="82" font-size="9">🧒</text><text x="33" y="82" font-size="9">👶</text>
-          <!-- れんけつ -->
-          <rect x="52" y="82" width="10" height="5" fill="#fff" opacity=".8"/>
-          <!-- せんとうしゃりょう -->
-          <rect x="62" y="58" width="66" height="38" rx="10" fill="#4A7FC9"/>
-          <rect x="62" y="58" width="66" height="10" rx="5" fill="#E8552F"/>
-          <!-- おかお -->
-          <circle cx="112" cy="80" r="13" fill="#fff"/>
-          <circle cx="107" cy="78" r="1.8" fill="#1E3A5F"/>
-          <circle cx="117" cy="78" r="1.8" fill="#1E3A5F"/>
-          <path d="M 106 84 Q 112 89 118 84" stroke="#E8552F" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <circle cx="103" cy="83" r="2.4" fill="#FFB4A0" opacity=".8"/>
-          <circle cx="121" cy="83" r="2.4" fill="#FFB4A0" opacity=".8"/>
+        <!-- おちば -->
+        <g class="leaf"><ellipse cx="240" cy="30" rx="5" ry="3" fill="#E8A02F"/></g>
+        <g class="leaf l2"><ellipse cx="300" cy="24" rx="5" ry="3" fill="#E8552F"/></g>
+        <g class="leaf l3"><ellipse cx="120" cy="34" rx="5" ry="3" fill="#D98324"/></g>
+        <!-- どうろ -->
+        <rect x="0" y="102" width="520" height="18" fill="#6B7F95" opacity=".28"/>
+        <g fill="#fff" opacity=".75">
+          <rect x="8" y="110" width="22" height="3" rx="1.5"/><rect x="54" y="110" width="22" height="3" rx="1.5"/>
+          <rect x="100" y="110" width="22" height="3" rx="1.5"/><rect x="146" y="110" width="22" height="3" rx="1.5"/>
+          <rect x="192" y="110" width="22" height="3" rx="1.5"/><rect x="238" y="110" width="22" height="3" rx="1.5"/>
+          <rect x="284" y="110" width="22" height="3" rx="1.5"/><rect x="330" y="110" width="22" height="3" rx="1.5"/>
+          <rect x="376" y="110" width="22" height="3" rx="1.5"/><rect x="422" y="110" width="22" height="3" rx="1.5"/>
+          <rect x="468" y="110" width="22" height="3" rx="1.5"/>
+        </g>
+        <!-- にこにこレンタカー(7人乗り) -->
+        <g class="car-run">
+          <!-- ルーフキャリア(BBQの荷物) -->
+          <rect x="34" y="56" width="62" height="7" rx="3" fill="#E8552F"/>
+          <rect x="42" y="49" width="20" height="8" rx="2" fill="#E8A02F"/>
+          <rect x="68" y="50" width="16" height="7" rx="2" fill="#4E9A6B"/>
+          <!-- ボディ -->
+          <path d="M 14 96 L 14 76 Q 14 66 26 64 L 96 62 Q 118 62 126 76 L 128 96 Z" fill="#4A7FC9"/>
+          <path d="M 14 88 L 128 88 L 128 96 L 14 96 Z" fill="#2E5FA3"/>
           <!-- まど -->
-          <rect x="70" y="72" width="14" height="12" rx="3" fill="#fff"/>
-          <text x="72" y="82" font-size="9">🐻</text>
+          <rect x="26" y="68" width="24" height="16" rx="4" fill="#fff"/>
+          <rect x="56" y="68" width="24" height="16" rx="4" fill="#fff"/>
+          <path d="M 86 68 L 106 68 Q 116 70 120 84 L 86 84 Z" fill="#fff"/>
+          <text x="29" y="81" font-size="12">🧒</text>
+          <text x="59" y="81" font-size="12">👧</text>
+          <text x="92" y="81" font-size="12">👶</text>
+          <!-- ライト -->
+          <circle cx="124" cy="84" r="4" fill="#FFD25A"/>
+          <circle cx="18" cy="84" r="3" fill="#E8552F"/>
           <!-- しゃりん -->
-          <g class="wheel"><circle cx="76" cy="98" r="7" fill="#1E3A5F"/><line x1="76" y1="92" x2="76" y2="104" stroke="#fff" stroke-width="1.6"/><line x1="70" y1="98" x2="82" y2="98" stroke="#fff" stroke-width="1.6"/></g>
-          <g class="wheel"><circle cx="112" cy="98" r="7" fill="#1E3A5F"/><line x1="112" y1="92" x2="112" y2="104" stroke="#fff" stroke-width="1.6"/><line x1="106" y1="98" x2="118" y2="98" stroke="#fff" stroke-width="1.6"/></g>
-          <g class="wheel"><circle cx="14" cy="98" r="6" fill="#1E3A5F"/><line x1="14" y1="93" x2="14" y2="103" stroke="#fff" stroke-width="1.5"/><line x1="9" y1="98" x2="19" y2="98" stroke="#fff" stroke-width="1.5"/></g>
-          <g class="wheel"><circle cx="40" cy="98" r="6" fill="#1E3A5F"/><line x1="40" y1="93" x2="40" y2="103" stroke="#fff" stroke-width="1.5"/><line x1="35" y1="98" x2="45" y2="98" stroke="#fff" stroke-width="1.5"/></g>
+          <g class="wheel"><circle cx="38" cy="98" r="9" fill="#1E3A5F"/><circle cx="38" cy="98" r="3.5" fill="#fff"/></g>
+          <g class="wheel"><circle cx="104" cy="98" r="9" fill="#1E3A5F"/><circle cx="104" cy="98" r="3.5" fill="#fff"/></g>
         </g>
       </svg>
     </div>
@@ -397,116 +422,169 @@ ul.todo input:checked{animation:pop .3s ease;}
 <div class="pane active" id="pane-plan">
 
   <section>
-    <h2><span class="em">👨‍👩‍👧‍👦</span>メンバー</h2>
+    <h2><span class="em">👨‍👩‍👧‍👦</span>メンバー（大人4・こども3）</h2>
+    <div class="famlabel">🚗 東大阪スタート組</div>
     <div class="members">
-      <div class="member">ぼく<span class="tag">大人</span></div>
+      <div class="member">ぼく<span class="tag">運転担当</span></div>
       <div class="member">妻<span class="tag">大人</span></div>
-      <div class="member">姉(3歳)<span class="tag kids">こども</span></div>
-      <div class="member">弟(1歳)<span class="tag kids">ひざの上</span></div>
-      <div class="member">じぃじ<span class="tag toku">送迎担当🚗</span></div>
-      <div class="member">ばぁば<span class="tag toku">徳島の母</span></div>
+      <div class="member">娘(3歳)<span class="tag kids">こども</span></div>
+      <div class="member">息子(2歳)<span class="tag kids">こども</span></div>
     </div>
+    <div class="famlabel">🚄 新神戸で合流組</div>
+    <div class="members">
+      <div class="member">大人<span class="tag toku">合流家族</span></div>
+      <div class="member">大人<span class="tag toku">合流家族</span></div>
+      <div class="member">男の子(3歳)<span class="tag kids">こども</span></div>
+    </div>
+    <div class="note blue"><b>🚗 車は1台で7人:</b> チャイルドシート3台が積めるサイズを確保する（8人乗りミニバン想定）。<b>合流家族はチャイルドシートを持参 or レンタルで追加</b>するかを事前に決めておく。</div>
   </section>
 
   <div class="subtabs" id="dayTabs" role="tablist" aria-label="日付切替">
-    <button class="on" data-day="day1">8/10<small>月・移動日</small></button>
-    <button data-day="day2">8/11<small>火・列車の日</small></button>
-    <button data-day="day3">8/12<small>水・最終日</small></button>
+    <button class="on" data-day="day1">10/3<small>土・移動＆BBQ</small></button>
+    <button data-day="day2">10/4<small>日・おもちゃ王国</small></button>
   </div>
 
   <div class="subpane active" id="day1">
   <section>
-    <h2><span class="em">🌙</span>1日目 — 大阪から徳島へ</h2>
+    <h2><span class="em">🔥</span>1日目 — 合流して、森でBBQ</h2>
     <div class="daycard">
-      <div class="dayhead"><span class="d">8/10</span><span class="w">(月)</span><span class="t">夜の車移動</span></div>
-      <div class="simple"><span class="time">20:00</span><p>大阪を車で出発 🚗<br><span style="font-size:13px;color:#5a6f86;">子どもたちは車で寝かせる作戦。途中休憩1回</span></p></div>
-      <div class="simple"><span class="time">22:30<br>ごろ</span><p>実家(徳島市入田町)に到着。そのままおやすみ 💤</p></div>
-      <div class="note"><b>💡 出発前に:</b> チャイルドシート2台の装着確認・車内おやつと飲み物・ETC/ガソリン</div>
+      <div class="dayhead"><span class="d">10/3</span><span class="w">(土)</span><span class="t">東大阪 → 新神戸 → THE森将軍</span></div>
+      <div class="kidstrip" aria-hidden="true"><span>🚗</span><span>🍽️</span><span>🌳</span><span>🔥</span><span>🌙</span></div>
+      <div class="rail">
+        <div class="stop">
+          <div class="time">9:30ごろ</div>
+          <div class="what">東大阪でレンタカーを借りる <span class="chip car">出発準備</span></div>
+          <div class="memo">ファミリーカー想定。チャイルドシートの取り付けと荷物の積み込みをここで済ませる</div>
+        </div>
+        <div class="stop">
+          <div class="time">10:00ごろ</div>
+          <div class="what">東大阪を出発 → 新神戸へ 🚗</div>
+          <div class="memo">阪神高速まわりで約1時間。土曜の午前は流れが読みにくいので余裕をみる</div>
+        </div>
+        <div class="stop major">
+          <div class="time">11:00ごろ</div>
+          <div class="what">新神戸で1家族と合流 🚄</div>
+          <div class="memo">ここから7人で移動。乗り換え・荷物の積み替えに15分はみておく</div>
+        </div>
+        <div class="stop">
+          <div class="time">11:30<br>〜13:00</div>
+          <div class="what">新神戸周辺でランチ <span class="chip meal">要予約</span></div>
+          <div class="memo">子どもが食べやすい・駐車場あり・7人で座れる店。<b style="color:var(--sun);">合流してすぐ食べるのが子連れには一番ラク</b></div>
+        </div>
+        <div class="stop">
+          <div class="time">13:00<br>〜14:00</div>
+          <div class="what">THE森将軍へ移動 🚗</div>
+          <div class="memo">新神戸→加東市黒谷。途中のSA/道の駅で1回休憩＆トイレ。食材の買い出しもこのタイミングで</div>
+        </div>
+        <div class="stop major">
+          <div class="time">14:00<br>〜15:00</div>
+          <div class="what">THE森将軍 到着 🏡</div>
+          <div class="memo">荷物を置いてひと休み。部屋割り・寝る場所をここで決めておくと夜がラク</div>
+        </div>
+        <div class="stop">
+          <div class="time">15:00<br>〜17:00</div>
+          <div class="what">宿の周辺を散策・ゆっくり 🌳</div>
+          <div class="memo">どんぐり拾い、広い場所で走る、BBQの準備を一緒にする。<b>1日目に遊び場は詰め込まない</b></div>
+        </div>
+        <div class="stop major">
+          <div class="time">17:00<br>〜19:00</div>
+          <div class="what">BBQ 🔥 <span class="chip play">今日のメイン</span></div>
+          <div class="memo">設備は無料だけど<b style="color:var(--sun);">食材・調味料・飲み物は持参</b>。10月夕方は冷えるので上着を出しておく</div>
+        </div>
+        <div class="stop">
+          <div class="time">19:00<br>〜20:00</div>
+          <div class="what">お風呂・寝かしつけ 🛁</div>
+          <div class="memo">子ども優先。3人まとめてお風呂→順番に寝かせる</div>
+        </div>
+        <div class="stop">
+          <div class="time">20:00〜</div>
+          <div class="what">大人の時間 🍻</div>
+          <div class="memo">2家族でゆっくり。明日の集合時間だけ決めて解散</div>
+        </div>
+      </div>
+      <div class="note green"><b>🏡 今日の考え方:</b> THE森将軍は「グランピング施設」というより<b>2家族で借りる一棟貸しの別荘</b>。移動と宿でゆっくりして、遊ぶのは明日に取っておく。</div>
+    </div>
+
+    <div class="legcard">
+      <h3>🚗 1日目の移動サマリ</h3>
+      <div class="tc-grid">
+        <div class="tc-item"><div class="k">東大阪 → 新神戸</div><div class="v">約1時間<br><span style="font-size:11px;font-weight:400;">10:00 → 11:00</span></div></div>
+        <div class="tc-item"><div class="k">新神戸 → THE森将軍</div><div class="v">約1時間<br><span style="font-size:11px;font-weight:400;">13:00 → 14:00</span></div></div>
+        <div class="tc-item"><div class="k">乗車人数</div><div class="v">大人4・こども3<br><span style="font-size:11px;font-weight:400;">車1台・CS3台</span></div></div>
+        <div class="tc-item"><div class="k">チェックイン</div><div class="v">14:00〜15:00<br><span style="font-size:11px;font-weight:400;">⚠️時間は要確認</span></div></div>
+      </div>
+      <div class="stops-mini">※所要時間は目安。土曜の阪神高速・中国道の混雑しだいで前後する</div>
     </div>
   </section>
   </div><!-- /day1 -->
 
   <div class="subpane" id="day2">
   <section>
-    <h2><span class="em">🚃</span>2日目 — アンパンマン列車の日！</h2>
+    <h2><span class="em">🎠</span>2日目 — おもちゃ王国で遊びきる</h2>
     <div class="daycard">
-      <div class="dayhead"><span class="d">8/11</span><span class="w">(火)</span><span class="t">じぃじ送迎プラン</span></div>
-      <div class="kidstrip" aria-hidden="true"><span>🚃</span><span>🍚</span><span>🎪</span><span>🍞</span><span>🎉</span></div>
+      <div class="dayhead"><span class="d">10/4</span><span class="w">(日)</span><span class="t">おもちゃ王国 → 神戸 → 東大阪</span></div>
+      <div class="kidstrip" aria-hidden="true"><span>🌅</span><span>🎠</span><span>🧸</span><span>🍽️</span><span>🚗</span></div>
       <div class="rail">
         <div class="stop">
-          <div class="time">10:00ごろ</div>
-          <div class="what">実家を出発 → 箸蔵とことんへ <span class="chip car">じぃじの車</span></div>
-          <div class="memo">入田町から阿波池田方面へ約1.5時間。じぃじの運転で全員移動</div>
+          <div class="time">7:00<br>〜8:00</div>
+          <div class="what">起床・朝食 🌅</div>
+          <div class="memo">子どものペースで。朝ごはんも持参なので前日に買っておく</div>
         </div>
         <div class="stop">
-          <div class="time">お昼</div>
-          <div class="what">箸蔵とことんでランチ 🍚</div>
-          <div class="memo">定食(★4.31)を食べたら、子供ひろばでひと遊び。14時すぎに阿波池田駅へ</div>
-        </div>
-        <div class="stop major">
-          <div class="time">14:30</div>
-          <div class="what">阿波池田駅 発 <span class="chip train">剣山6号</span></div>
-          <div class="memo">乗るのは ぼく・妻・姉・弟(膝上)・ばぁば の5人。<br>🚗 じぃじはここから車で徳島へ先回り</div>
-        </div>
-        <div class="stop major">
-          <div class="time">15:51</div>
-          <div class="what">徳島駅 着 → じぃじがお迎え 🎉</div>
-          <div class="memo">約1時間20分の列車旅。プレイルームで遊びながら</div>
+          <div class="time">8:00<br>〜9:00</div>
+          <div class="what">宿の周辺でゆっくり 🌳</div>
+          <div class="memo">朝の散策。子どもを外で動かしておくと、この後の車移動がラク</div>
         </div>
         <div class="stop">
-          <div class="time">夜</div>
-          <div class="what">くいものや 柚 石井店 で夕食 🍻</div>
-          <div class="memo">18時開店・石井町。<b style="color:var(--sun);">お盆営業ありだが要早め予約</b></div>
+          <div class="time">9:00<br>〜10:00</div>
+          <div class="what">荷物整理・チェックアウト <span class="chip car">10:00</span></div>
+          <div class="memo">チェックアウトは10時。忘れ物チェック（充電器・おもちゃ・タオル）</div>
+        </div>
+        <div class="stop">
+          <div class="time">10:00<br>〜10:15</div>
+          <div class="what">東条湖おもちゃ王国へ移動 🚗</div>
+          <div class="memo">車で約5分。営業は<b>9:30〜17:00</b>（10/4）</div>
+        </div>
+        <div class="stop major">
+          <div class="time">10:15<br>〜12:30</div>
+          <div class="what">東条湖おもちゃ王国 🎠 <span class="chip play">今日のメイン</span></div>
+          <div class="memo">まず乗り物、疲れる前に「おもちゃのお部屋」へ。2歳・3歳が一緒に遊べる場所を先に押さえる</div>
+        </div>
+        <div class="stop">
+          <div class="time">12:30<br>〜13:30</div>
+          <div class="what">園内でランチ 🍽️</div>
+          <div class="memo">子どもが疲れきる前に休憩。混む時間なので早めに入る</div>
+        </div>
+        <div class="stop">
+          <div class="time">13:30<br>〜15:00</div>
+          <div class="what">もうひと遊び 🧸</div>
+          <div class="memo">午前に見つけたお気に入りをもう一周。帰りのぐずり対策におやつを確保</div>
+        </div>
+        <div class="stop">
+          <div class="time">15:00ごろ</div>
+          <div class="what">おもちゃ王国を出発 → 神戸へ 🚗</div>
+          <div class="memo">閉園まで粘らず、余力を残して出る</div>
+        </div>
+        <div class="stop major">
+          <div class="time">16:00<br>〜17:00</div>
+          <div class="what">神戸で1家族を送り届ける 👋</div>
+          <div class="memo">ここで解散。神戸にもう1泊する家族と、東大阪へ帰る家族で動線が分かれる</div>
+        </div>
+        <div class="stop">
+          <div class="time">17:00<br>〜18:30</div>
+          <div class="what">東大阪へ戻る 🚗</div>
+          <div class="memo">休憩をはさみながら。日曜夕方の渋滞を見込んでおく</div>
+        </div>
+        <div class="stop">
+          <div class="time">19:00ごろ</div>
+          <div class="what">レンタカー返却 → 1泊旅行おわり 🌙</div>
+          <div class="memo">ガソリン満タン返しの時間も込みで逆算する。おつかれさま！</div>
         </div>
       </div>
-      <div class="note green"><b>🚗 じぃじの動き:</b> 実家→とことん(送り)→阿波池田で見送り→車で徳島へ→徳島駅でお迎え→夜は柚へ。1日ありがとうじぃじ!</div>
-    </div>
-
-    <div class="traincard">
-      <h3>🚃 剣山6号 ゆうゆうアンパンマンカー</h3>
-      <div class="kidstrip" aria-hidden="true" style="background:rgba(255,255,255,.15);"><span>🚂</span><span>💨</span><span>🎠</span><span>📖</span><span>⭐</span></div>
-      <div class="tc-grid">
-        <div class="tc-item"><div class="k">出発</div><div class="v">阿波池田 14:30</div></div>
-        <div class="tc-item"><div class="k">到着</div><div class="v">徳島 15:51</div></div>
-        <div class="tc-item"><div class="k">座席</div><div class="v">2号車 指定席</div></div>
-        <div class="tc-item"><div class="k">人数</div><div class="v">大人3・子供1<br><span style="font-size:11px;font-weight:400;">(弟はひざの上)</span></div></div>
-      </div>
-      <div class="stops-mini">途中停車: 阿波加茂 14:41 → 貞光 14:53 → 穴吹 15:06 → 阿波山川 15:15 → 阿波川島 15:24 → 鴨島 15:29 → 石井 15:40 → 蔵本 15:47</div>
+      <div class="note"><b>💡 このプランの効きどころ:</b> 1日目は移動と宿でゆっくり、2日目に子どもたちを遊ばせる。おもちゃ王国が宿から車5分なので、朝の移動でぐずらせずに済む。</div>
     </div>
   </section>
   </div><!-- /day2 -->
-
-  <div class="subpane" id="day3">
-  <section>
-    <h2><span class="em">🏮</span>3日目 — 阿波踊り&大阪へ</h2>
-    <div class="daycard">
-      <div class="dayhead"><span class="d">8/12</span><span class="w">(水)</span><span class="t">最終日</span></div>
-      <div class="rail">
-        <div class="stop">
-          <div class="time">午前〜昼</div>
-          <div class="what">阿波踊りの公演を見に行く 🏮 <span class="chip car">車</span></div>
-          <div class="memo"><b style="color:var(--sun);">候補: フジグラン石井 or フジグラン北島</b>。お盆時期は商業施設で連の公演があることが多い。<br>⚠️ 開催有無・時間は<b>直前に要チェック</b>(なければ実家でのんびりに切替)</div>
-        </div>
-        <div class="stop">
-          <div class="time">夕方</div>
-          <div class="what">実家でゆっくり過ごす 🏠</div>
-          <div class="memo">子どもたちのお昼寝&帰り支度。じぃじ・ばぁばとの時間</div>
-        </div>
-        <div class="stop major">
-          <div class="time">18:00</div>
-          <div class="what">大阪へ向けて出発 🚗</div>
-          <div class="memo">淡路経由で約2.5〜3時間。子どもたちは車で夕寝作戦</div>
-        </div>
-        <div class="stop">
-          <div class="time">21:00<br>ごろ</div>
-          <div class="what">大阪の自宅に到着 🌙 おつかれさま!</div>
-          <div class="memo">渋滞状況しだい。お盆の帰阪ラッシュに注意</div>
-        </div>
-      </div>
-      <div class="note"><b>💡 出発前に:</b> 忘れ物チェック(充電器・おもちゃ)・ガソリン残量・トイレ&おむつ替えを済ませてから乗車</div>
-    </div>
-  </section>
-  </div><!-- /day3 -->
 </div>
 
 <!-- ══════════ TAB 2: マップ ══════════ -->
@@ -514,62 +592,72 @@ ul.todo input:checked{animation:pop .3s ease;}
   <section>
     <h2><span class="em">🗺️</span>移動マップ</h2>
     <div class="mapcard">
-      <svg viewBox="0 0 520 330" role="img" aria-label="徳島の移動マップ">
-        <!-- 吉野川 -->
-        <path d="M 20 150 C 110 130, 200 155, 300 140 S 470 120, 505 105" fill="none" stroke="#BBDCF2" stroke-width="22" stroke-linecap="round"/>
-        <path d="M 20 150 C 110 130, 200 155, 300 140 S 470 120, 505 105" fill="none" stroke="#7FB5E0" stroke-width="3" stroke-dasharray="1 8" stroke-linecap="round"/>
-        <text x="235" y="128" font-size="12" fill="#5D93BE" font-weight="bold">吉野川</text>
+      <svg viewBox="0 0 520 330" role="img" aria-label="東大阪から新神戸・加東市への移動マップ">
+        <!-- 瀬戸内(海) -->
+        <path d="M 0 250 C 120 235, 260 262, 400 246 C 460 240, 500 246, 520 242 L 520 330 L 0 330 Z" fill="#CFE6F7"/>
+        <text x="180" y="300" font-size="12" fill="#5D93BE" font-weight="bold">大阪湾</text>
 
-        <!-- 鮎喰川(実家方面) -->
-        <path d="M 430 122 C 415 170, 400 210, 380 250" fill="none" stroke="#BBDCF2" stroke-width="10" stroke-linecap="round"/>
+        <!-- 山(北側) -->
+        <path d="M 40 70 L 90 26 L 140 70 Z" fill="#D7E7DC"/>
+        <path d="M 110 76 L 165 34 L 220 76 Z" fill="#C9DFD1"/>
+        <text x="96" y="92" font-size="11" fill="#6B8F79" font-weight="bold">北播磨の山あい</text>
 
-        <!-- 車ルート(緑破線): 実家→とことん -->
-        <path d="M 385 258 C 300 275, 140 250, 70 175" fill="none" stroke="#3E8E5A" stroke-width="4" stroke-dasharray="8 7" stroke-linecap="round"/>
-        <text x="175" y="288" font-size="12" fill="#3E8E5A" font-weight="bold">🚗 じぃじの車で とことんへ(約1.5h)</text>
+        <!-- ルート1日目(緑): 東大阪→新神戸→森将軍 -->
+        <path d="M 462 196 C 400 206, 330 214, 262 200" fill="none" stroke="#3E8E5A" stroke-width="5" stroke-linecap="round"/>
+        <path d="M 262 200 C 220 186, 190 150, 168 118" fill="none" stroke="#3E8E5A" stroke-width="5" stroke-linecap="round"/>
+        <text x="300" y="226" font-size="12" fill="#3E8E5A" font-weight="bold">🚗 ①東大阪→新神戸 約1h</text>
+        <text x="150" y="164" font-size="12" fill="#3E8E5A" font-weight="bold">②新神戸→森将軍 約1h</text>
 
-        <!-- 列車ルート(青実線): 阿波池田→徳島 -->
-        <path d="M 62 148 C 160 168, 300 150, 470 108" fill="none" stroke="#2E5FA3" stroke-width="5" stroke-linecap="round"/>
-        <text x="185" y="185" font-size="12" fill="#2E5FA3" font-weight="bold">🚃 剣山6号 14:30→15:51</text>
+        <!-- 宿→おもちゃ王国(短) -->
+        <path d="M 168 118 L 120 106" fill="none" stroke="#E8552F" stroke-width="5" stroke-linecap="round"/>
+        <text x="24" y="128" font-size="11" fill="#E8552F" font-weight="bold">車で約5分</text>
+
+        <!-- ルート2日目(青破線): おもちゃ王国→神戸→東大阪 -->
+        <path d="M 116 100 C 170 150, 220 190, 262 200" fill="none" stroke="#2E5FA3" stroke-width="4" stroke-dasharray="9 7" stroke-linecap="round"/>
+        <path d="M 262 200 C 340 222, 410 214, 462 196" fill="none" stroke="#2E5FA3" stroke-width="4" stroke-dasharray="9 7" stroke-linecap="round"/>
+        <text x="292" y="252" font-size="12" fill="#2E5FA3" font-weight="bold">🚗 帰り 神戸で解散→東大阪</text>
 
         <!-- スポット -->
-        <!-- とことん -->
-        <circle cx="55" cy="112" r="10" fill="#3E8E5A" stroke="#fff" stroke-width="3"/>
-        <text x="45" y="95" font-size="13" font-weight="bold" fill="#1E3A5F">🍚 箸蔵とことん</text>
-        <!-- 阿波池田駅 -->
-        <circle cx="62" cy="148" r="10" fill="#E8552F" stroke="#fff" stroke-width="3"/>
-        <text x="78" y="152" font-size="13" font-weight="bold" fill="#1E3A5F">阿波池田駅</text>
-        <!-- 石井(柚) -->
-        <circle cx="400" cy="120" r="9" fill="#B0491F" stroke="#fff" stroke-width="3"/>
-        <text x="330" y="98" font-size="13" font-weight="bold" fill="#1E3A5F">🍻 柚 石井店</text>
-        <!-- 徳島駅 -->
-        <circle cx="470" cy="108" r="10" fill="#E8552F" stroke="#fff" stroke-width="3"/>
-        <text x="440" y="88" font-size="13" font-weight="bold" fill="#1E3A5F">徳島駅</text>
-        <!-- 実家 -->
-        <circle cx="388" cy="258" r="11" fill="#2E5FA3" stroke="#fff" stroke-width="3"/>
-        <text x="404" y="263" font-size="13" font-weight="bold" fill="#1E3A5F">🏠 実家</text>
-        <text x="404" y="279" font-size="11" fill="#5a6f86">徳島市入田町</text>
+        <!-- おもちゃ王国 -->
+        <circle cx="112" cy="98" r="10" fill="#E8552F" stroke="#fff" stroke-width="3"/>
+        <text x="16" y="82" font-size="13" font-weight="bold" fill="#1E3A5F">🎠 東条湖おもちゃ王国</text>
+        <!-- THE森将軍 -->
+        <circle cx="170" cy="118" r="11" fill="#3E8E5A" stroke="#fff" stroke-width="3"/>
+        <text x="186" y="122" font-size="13" font-weight="bold" fill="#1E3A5F">🏡 THE森将軍</text>
+        <text x="186" y="137" font-size="11" fill="#5a6f86">兵庫県加東市黒谷</text>
+        <!-- 新神戸 -->
+        <circle cx="262" cy="200" r="10" fill="#2E5FA3" stroke="#fff" stroke-width="3"/>
+        <text x="206" y="192" font-size="13" font-weight="bold" fill="#1E3A5F">🚄 新神戸</text>
+        <!-- 東大阪 -->
+        <circle cx="462" cy="196" r="11" fill="#1E3A5F" stroke="#fff" stroke-width="3"/>
+        <text x="404" y="184" font-size="13" font-weight="bold" fill="#1E3A5F">🏠 東大阪</text>
+        <text x="404" y="199" font-size="11" fill="#5a6f86">レンタカー発着</text>
 
         <!-- 方位 -->
-        <text x="20" y="320" font-size="11" fill="#8ba0b6">← 西(山のほう)</text>
-        <text x="430" y="320" font-size="11" fill="#8ba0b6">東(海のほう) →</text>
+        <text x="16" y="320" font-size="11" fill="#8ba0b6">← 西・北(山のほう)</text>
+        <text x="426" y="320" font-size="11" fill="#8ba0b6">東(大阪) →</text>
       </svg>
       <div class="maplegend">
-        <span class="l"><span class="dot" style="background:#3E8E5A;"></span>車(じぃじ)</span>
-        <span class="l"><span class="dot" style="background:#2E5FA3;"></span>アンパンマン列車</span>
-        <span class="l"><span class="dot" style="background:#E8552F;"></span>駅</span>
+        <span class="l"><span class="dot" style="background:#3E8E5A;"></span>1日目のルート</span>
+        <span class="l"><span class="dot" style="background:#2E5FA3;"></span>2日目の帰り</span>
+        <span class="l"><span class="dot" style="background:#E8552F;"></span>宿⇄おもちゃ王国(5分)</span>
       </div>
 
+      <a class="routebtn" target="_blank" rel="noopener"
+         href="https://www.google.com/maps/dir/%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82/%E6%96%B0%E7%A5%9E%E6%88%B8%E9%A7%85/%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8A%A0%E6%9D%B1%E5%B8%82%E9%BB%92%E8%B0%B71197-431/%E6%9D%B1%E6%9D%A1%E6%B9%96%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E7%8E%8B%E5%9B%BD/%E6%96%B0%E7%A5%9E%E6%88%B8%E9%A7%85/%E6%9D%B1%E5%A4%A7%E9%98%AA%E5%B8%82/">
+        🗺️ Googleマップで全ルートを見る
+      </a>
+
       <div class="gmap-tabs" id="gmapTabs">
-        <button class="on" data-q="徳島市入田町">🏠 実家周辺</button>
-        <button data-q="地域交流拠点 箸蔵とことん 三好市">🍚 とことん</button>
-        <button data-q="阿波池田駅">🚉 阿波池田駅</button>
-        <button data-q="くいものや柚 石井店 徳島県名西郡石井町">🍻 柚 石井店</button>
-        <button data-q="フジグラン石井">🏮 フジグラン石井</button>
-        <button data-q="フジグラン北島">🏮 フジグラン北島</button>
+        <button class="on" data-q="兵庫県加東市黒谷1197-431">🏡 THE森将軍</button>
+        <button data-q="東条湖おもちゃ王国">🎠 おもちゃ王国</button>
+        <button data-q="新神戸駅">🚄 新神戸駅</button>
+        <button data-q="道の駅 とうじょう">🍽️ 道の駅とうじょう</button>
+        <button data-q="東大阪市">🏠 東大阪</button>
       </div>
       <div class="gmap">
         <iframe id="gmapFrame" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          src="https://maps.google.com/maps?q=%E5%BE%B3%E5%B3%B6%E5%B8%82%E5%85%A5%E7%94%B0%E7%94%BA&z=12&output=embed"></iframe>
+          src="https://maps.google.com/maps?q=%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8A%A0%E6%9D%B1%E5%B8%82%E9%BB%92%E8%B0%B71197-431&z=13&output=embed"></iframe>
       </div>
     </div>
   </section>
@@ -581,60 +669,98 @@ ul.todo input:checked{animation:pop .3s ease;}
     <h2><span class="em">🔗</span>スポット情報</h2>
 
     <div class="linkcard">
-      <div class="lc-hero train">
-        <span class="big">🚃</span>
-        <div class="name"><small>JR四国・徳島線</small>ゆうゆうアンパンマンカー<br>(剣山6号)</div>
+      <div class="lc-hero cabin">
+        <span class="big">🏡</span>
+        <div class="name"><small>10/3 泊・一棟貸し</small>THE森将軍</div>
       </div>
       <div class="lc-body">
         <div class="lc-facts">
-          <span class="f"><span class="k">区間</span>阿波池田 14:30 → 徳島 15:51</span>
-          <span class="f"><span class="k">座席</span>2号車・全席指定</span>
+          <span class="f"><span class="k">住所</span>兵庫県加東市黒谷1197-431</span>
+          <span class="f"><span class="k">定員</span>最大適正14名</span>
+          <span class="f"><span class="k">部屋</span>3部屋</span>
+          <span class="f"><span class="k">駐車</span>3台</span>
+          <span class="f"><span class="k">BBQ</span>無料</span>
+          <span class="f"><span class="k">OUT</span>10:00</span>
         </div>
-        <div class="lc-desc">車内にプレイルームあり。姉も弟もここで遊べるはず。予約はe5489で乗車1ヶ月前(7/11)から。</div>
+        <div class="kidstrip" aria-hidden="true"><span>🌳</span><span>🔥</span><span>🍖</span><span>🛏️</span><span>⭐</span></div>
+        <div class="lc-desc">BBQベランダ・BBQピロティ・和室・ロフトがある一棟貸し。大人4＋こども3なら人数的にかなり余裕がある。<b>食事は出ないので、食材・調味料・飲み物は持参</b>。東条湖おもちゃ王国まで車で約5分。</div>
         <div class="lc-btns">
-          <a class="primary" href="https://www.jr-eki.com/aptrain/naani/yuyu/train.html" target="_blank" rel="noopener">🚃 車両紹介ページ</a>
-          <a class="map" href="https://e5489.jr-odekake.net/" target="_blank" rel="noopener">🎫 e5489で予約</a>
+          <a class="primary" href="https://www.google.com/search?q=THE%E6%A3%AE%E5%B0%86%E8%BB%8D+%E5%8A%A0%E6%9D%B1%E5%B8%82+%E5%85%AC%E5%BC%8F" target="_blank" rel="noopener">🌐 公式情報を見る</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8A%A0%E6%9D%B1%E5%B8%82%E9%BB%92%E8%B0%B71197-431" target="_blank" rel="noopener">📍 地図を開く</a>
         </div>
       </div>
     </div>
 
     <div class="linkcard">
-      <div class="lc-hero teishoku">
-        <span class="big">🍚</span>
-        <div class="name"><small>ランチ&子供ひろば</small>地域交流拠点 箸蔵とことん</div>
+      <div class="lc-hero park">
+        <span class="big">🎠</span>
+        <div class="name"><small>10/4 メイン</small>東条湖おもちゃ王国</div>
       </div>
       <div class="lc-body">
         <div class="lc-facts">
-          <span class="f"><span class="star">★4.31</span></span>
-          <span class="f"><span class="k">場所</span>三好市(箸蔵駅 徒歩約21分)</span>
-          <span class="f"><span class="k">タイプ</span>定食屋・産直市</span>
+          <span class="f"><span class="k">10/4営業</span>9:30〜17:00</span>
+          <span class="f"><span class="k">宿から</span>車で約5分</span>
+          <span class="f"><span class="k">対象</span>2歳・3歳が一緒に遊べる</span>
         </div>
-        <div class="kidstrip" aria-hidden="true"><span>🍚</span><span>🐟</span><span>🥗</span><span>🍞</span><span>🥕</span></div>
-        <div class="lc-desc">イベント開催や産直市、パン販売もある地域交流拠点。子供ひろばがあるので食後に子どもたちを遊ばせられる。</div>
+        <div class="kidstrip" aria-hidden="true"><span>🎡</span><span>🚂</span><span>🧸</span><span>🧩</span><span>🎈</span></div>
+        <div class="lc-desc">乗り物と「おもちゃのお部屋」が中心。今回の3人（3歳・3歳・2歳）の年齢とかなり相性がいい。雨でも屋内で遊べるのが強み。<b>3人が乗れる乗り物を事前にチェックしておく</b>と当日ラク。</div>
         <div class="lc-btns">
-          <a class="primary" href="https://tocoton.jp/" target="_blank" rel="noopener">🌐 公式サイト</a>
-          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E7%AE%B8%E8%94%B5%E3%81%A8%E3%81%93%E3%81%A8%E3%82%93+%E4%B8%89%E5%A5%BD%E5%B8%82" target="_blank" rel="noopener">📍 地図を開く</a>
+          <a class="primary" href="https://www.omochaoukoku.com/toujyoko/" target="_blank" rel="noopener">🌐 公式サイト</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E6%9D%A1%E6%B9%96%E3%81%8A%E3%82%82%E3%81%A1%E3%82%83%E7%8E%8B%E5%9B%BD" target="_blank" rel="noopener">📍 地図</a>
         </div>
       </div>
     </div>
 
     <div class="linkcard">
-      <div class="lc-hero izakaya">
-        <span class="big">🍻</span>
-        <div class="name"><small>8/11 夜ごはん</small>くいものや 柚 石井店</div>
+      <div class="lc-hero lunch">
+        <span class="big">🍽️</span>
+        <div class="name"><small>10/3 ランチ</small>新神戸周辺で食べる（推し）</div>
       </div>
       <div class="lc-body">
         <div class="lc-facts">
-          <span class="f"><span class="star">★3.45</span></span>
-          <span class="f"><span class="k">営業</span>18:00〜翌1:00</span>
-          <span class="f"><span class="k">場所</span>石井町高川原(駐車場あり・個室あり)</span>
+          <span class="f"><span class="k">条件</span>7人で座れる</span>
+          <span class="f"><span class="k">条件</span>駐車場あり</span>
+          <span class="f"><span class="k">条件</span>子どもが食べやすい</span>
         </div>
-        <div class="kidstrip" aria-hidden="true"><span>🍗</span><span>🍤</span><span>🍙</span><span>🥟</span><span>🍧</span></div>
-        <div class="lc-desc">創作系の居酒屋。阿波尾鶏の焼き物やチキン南蛮が評判。お盆も営業予定だけど席が埋まりやすいので早めの電話予約を。</div>
+        <div class="lc-desc">新神戸で合流してから別の場所へ移動して食べるより、駅周辺で済ませて東条湖へ向かう方が子連れにはスムーズ。ファミレス・洋食を軸に<b>3〜4店に絞って予約</b>しておく。</div>
         <div class="lc-btns">
-          <a class="tabelog" href="https://tabelog.com/tokushima/A3603/A360303/36004572/" target="_blank" rel="noopener">🍴 食べログ</a>
-          <a class="tel" href="tel:0886740667">📞 電話で予約</a>
-          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E3%81%8F%E3%81%84%E3%82%82%E3%81%AE%E3%82%84%E6%9F%9A+%E7%9F%B3%E4%BA%95%E5%BA%97" target="_blank" rel="noopener">📍 地図</a>
+          <a class="tabelog" href="https://tabelog.com/hyogo/A2801/A280102/rstLst/?vs=1&sk=%E3%83%A9%E3%83%B3%E3%83%81" target="_blank" rel="noopener">🍴 食べログで探す</a>
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E6%96%B0%E7%A5%9E%E6%88%B8%E9%A7%85+%E3%83%A9%E3%83%B3%E3%83%81+%E9%A7%90%E8%BB%8A%E5%A0%B4%E3%81%82%E3%82%8A" target="_blank" rel="noopener">📍 周辺を地図で見る</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="linkcard">
+      <div class="lc-hero lunch">
+        <span class="big">🛣️</span>
+        <div class="name"><small>ランチ案②／買い出し</small>道の駅 とうじょう</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-facts">
+          <span class="f"><span class="k">位置</span>東条湖方面・宿の手前</span>
+          <span class="f"><span class="k">使い方</span>途中ランチ or BBQ食材</span>
+        </div>
+        <div class="lc-desc">新神戸で食べずに走る場合の受け皿。ランチにしなくても、<b>BBQ食材と朝ごはんの買い出し</b>に寄る先として押さえておくと動線がきれい。</div>
+        <div class="lc-btns">
+          <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E9%81%93%E3%81%AE%E9%A7%85+%E3%81%A8%E3%81%86%E3%81%98%E3%82%87%E3%81%86" target="_blank" rel="noopener">📍 地図を開く</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="linkcard">
+      <div class="lc-hero rentacar">
+        <span class="big">🚗</span>
+        <div class="name"><small>10/3 9:30 〜 10/4 19:00</small>レンタカー（東大阪）</div>
+      </div>
+      <div class="lc-body">
+        <div class="lc-facts">
+          <span class="f"><span class="k">乗車</span>大人4・こども3</span>
+          <span class="f"><span class="k">サイズ</span>8人乗りミニバン想定</span>
+          <span class="f"><span class="k">装備</span>チャイルドシート3台</span>
+        </div>
+        <div class="lc-desc">7人＋1泊分の荷物＋BBQの買い出しが積めるサイズで。<b>チャイルドシートは台数指定で予約</b>（当日在庫だと足りないことがある）。返却19時に間に合うよう、給油の時間も逆算しておく。</div>
+        <div class="lc-btns">
+          <a class="primary" href="https://www.google.com/search?q=%E6%9D%B1%E5%A4%A7%E9%98%AA+%E3%83%AC%E3%83%B3%E3%82%BF%E3%82%AB%E3%83%BC+%E3%83%9F%E3%83%8B%E3%83%90%E3%83%B3+8%E4%BA%BA%E4%B9%97%E3%82%8A" target="_blank" rel="noopener">🔎 東大阪で探す</a>
         </div>
       </div>
     </div>
@@ -645,67 +771,82 @@ ul.todo input:checked{animation:pop .3s ease;}
 <!-- ══════════ TAB 4: 準備 ══════════ -->
 <div class="pane" id="pane-prep">
   <section>
-    <h2><span class="em">📋</span>出発までにやること</h2>
+    <h2><span class="em">📋</span>これから決める・予約する</h2>
     <div class="check">
-      <h3>🎫 予約・確認 <span class="due">7/11 予約開始!</span></h3>
+      <h3>🎫 予約・確認 <span class="due">10/3まで</span></h3>
       <ul class="todo" data-list>
-        <li><label><input type="checkbox"><span>アンパンマンカーの指定席予約(e5489)<span class="sub">乗車1ヶ月前の7/11から。2号車4・5列目が狙い目 → ばぁば担当</span></span></label></li>
-        <li><label><input type="checkbox"><span>くいものや 柚 石井店を電話予約 (088-674-0667)<span class="sub">お盆営業あり。早めに席をおさえる</span></span></label></li>
-        <li><label><input type="checkbox"><span>じぃじに送迎プランを共有<span class="sub">とことん送り→池田で見送り→徳島駅お迎え、の流れをLINEで確認</span></span></label></li>
-        <li><label><input type="checkbox"><span>とことんの8/11営業を確認<span class="sub">お盆時期の営業時間・子供ひろばの利用可否</span></span></label></li>
-        <li><label><input type="checkbox"><span>【直前】8/12の阿波踊り公演を調べる<span class="sub">フジグラン石井 or フジグラン北島。開催有無と時間をチェック(8/10ごろ)</span></span></label></li>
+        <li><label><input type="checkbox"><span>THE森将軍を予約する<span class="sub">10/3(土)1泊・大人4＋こども3。チェックイン/アウト時刻も確認</span></span></label></li>
+        <li><label><input type="checkbox"><span>レンタカーを予約（サイズ・チャイルドシート3台・返却19:00）<span class="sub">9:30貸出→翌19:00返却。CSは台数指定で押さえる</span></span></label></li>
+        <li><label><input type="checkbox"><span>新神戸周辺のランチを3〜4店に絞る<span class="sub">7人・駐車場・子ども向けメニューで絞って予約</span></span></label></li>
+        <li><label><input type="checkbox"><span>THE森将軍の部屋・寝具・子連れでの使いやすさを確認<span class="sub">布団の枚数、和室/ロフトの寝かせ方、ベビー用品の有無</span></span></label></li>
+        <li><label><input type="checkbox"><span>おもちゃ王国で3人が楽しめる乗り物・お部屋を洗い出す<span class="sub">2歳が乗れるもの／身長制限をチェック。当日の回り順を決める</span></span></label></li>
+        <li><label><input type="checkbox"><span>合流家族と当日の流れを共有<span class="sub">新神戸の合流場所・時間、10/4の解散場所をLINEで確定</span></span></label></li>
+        <li><label><input type="checkbox"><span>BBQの食材・飲み物の分担を決める<span class="sub">どこで買うか（道の駅 or 神戸）と、何を誰が持つか</span></span></label></li>
+        <li><label><input type="checkbox"><span>【直前】10/4のおもちゃ王国の営業と天気を確認<span class="sub">9:30〜17:00の予定。雨なら屋内中心に切り替え</span></span></label></li>
       </ul>
-      <div class="progress" data-progress>0 / 5 完了</div>
+      <div class="progress" data-progress>0 / 8 完了</div>
     </div>
   </section>
 
   <section>
-    <h2><span class="em">🎒</span>帰省の準備一覧</h2>
+    <h2><span class="em">🎒</span>持ち物リスト</h2>
     <div class="packgrid">
       <div class="check">
-        <h3>👶 子どもグッズ</h3>
+        <h3>🔥 BBQ・宿</h3>
         <ul class="todo" data-list>
-          <li><label><input type="checkbox"><span>おむつ・おしりふき(多めに)</span></label></li>
-          <li><label><input type="checkbox"><span>着替え(2人×2〜3セット)</span></label></li>
-          <li><label><input type="checkbox"><span>抱っこ紐(列車&とことん用)</span></label></li>
+          <li><label><input type="checkbox"><span>肉・野菜・焼きそばなどの食材</span></label></li>
+          <li><label><input type="checkbox"><span>調味料（塩こしょう・タレ・油）</span></label></li>
+          <li><label><input type="checkbox"><span>飲み物・氷・クーラーボックス</span></label></li>
+          <li><label><input type="checkbox"><span>紙皿・紙コップ・割り箸・ゴミ袋</span></label></li>
+          <li><label><input type="checkbox"><span>ウェットティッシュ・キッチンペーパー</span></label></li>
+          <li><label><input type="checkbox"><span>子ども用の取り皿・スプーン</span></label></li>
+          <li><label><input type="checkbox"><span>翌朝の朝ごはん</span></label></li>
+        </ul>
+      </div>
+      <div class="check">
+        <h3>👶 子どもグッズ×3人</h3>
+        <ul class="todo" data-list>
+          <li><label><input type="checkbox"><span>おむつ・おしりふき（多めに）</span></label></li>
+          <li><label><input type="checkbox"><span>着替え（1人2セット・汚れ前提）</span></label></li>
           <li><label><input type="checkbox"><span>母子手帳・保険証・医療証</span></label></li>
           <li><label><input type="checkbox"><span>お気に入りのおもちゃ・絵本</span></label></li>
           <li><label><input type="checkbox"><span>マグ・ストローボトル</span></label></li>
+          <li><label><input type="checkbox"><span>寝るときのタオル・お気に入り</span></label></li>
         </ul>
       </div>
       <div class="check">
         <h3>🚗 車内・移動対策</h3>
         <ul class="todo" data-list>
-          <li><label><input type="checkbox"><span>チャイルドシート×2 装着確認</span></label></li>
+          <li><label><input type="checkbox"><span>チャイルドシート3台の装着確認</span></label></li>
           <li><label><input type="checkbox"><span>車内おやつ・飲み物</span></label></li>
-          <li><label><input type="checkbox"><span>ブランケット(夜の車内用)</span></label></li>
+          <li><label><input type="checkbox"><span>エチケット袋・タオル（車酔い対策）</span></label></li>
           <li><label><input type="checkbox"><span>充電ケーブル・モバイルバッテリー</span></label></li>
-          <li><label><input type="checkbox"><span>ETCカード・ガソリン満タン</span></label></li>
+          <li><label><input type="checkbox"><span>ETCカード・ガソリン確認</span></label></li>
         </ul>
       </div>
       <div class="check">
-        <h3>☀️ 夏の対策</h3>
+        <h3>🍂 10月の外遊び対策</h3>
         <ul class="todo" data-list>
-          <li><label><input type="checkbox"><span>帽子(全員分)</span></label></li>
-          <li><label><input type="checkbox"><span>日焼け止め</span></label></li>
+          <li><label><input type="checkbox"><span>上着・羽織り（夕方は冷える）</span></label></li>
+          <li><label><input type="checkbox"><span>動きやすい靴・替えの靴下</span></label></li>
           <li><label><input type="checkbox"><span>虫よけ・かゆみ止め</span></label></li>
-          <li><label><input type="checkbox"><span>保冷剤・冷感タオル</span></label></li>
+          <li><label><input type="checkbox"><span>レインコート・折りたたみ傘</span></label></li>
+          <li><label><input type="checkbox"><span>どんぐりを入れる袋 🌰</span></label></li>
         </ul>
       </div>
       <div class="check">
         <h3>👜 おとなの持ち物</h3>
         <ul class="todo" data-list>
           <li><label><input type="checkbox"><span>財布・免許証</span></label></li>
-          <li><label><input type="checkbox"><span>予約確認(e5489)のスクショ</span></label></li>
+          <li><label><input type="checkbox"><span>宿・レンタカーの予約確認スクショ</span></label></li>
           <li><label><input type="checkbox"><span>常備薬</span></label></li>
-          <li><label><input type="checkbox"><span>実家へのおみやげ</span></label></li>
           <li><label><input type="checkbox"><span>スマホ容量の確保 📷</span></label></li>
         </ul>
       </div>
     </div>
   </section>
 
-  <footer>たのしい帰省になりますように 🍞✨</footer>
+  <footer>たのしい2家族旅になりますように 🌳🔥</footer>
 </div>
 
 </div><!-- /wrap -->
