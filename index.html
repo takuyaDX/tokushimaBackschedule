@@ -273,6 +273,24 @@ ul.todo input:checked + span{color:#9aacc0;text-decoration:line-through;}
 ul.todo .sub{display:block;font-size:12px;color:#7a8ea3;}
 .progress{font-size:12px;color:#6b7f95;text-align:right;margin-top:4px;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;}
 .packgrid{display:grid;grid-template-columns:1fr;gap:14px;}
+
+/* ── 宿のルール ── */
+.rules{background:var(--card);border-radius:16px;padding:16px 20px;box-shadow:0 2px 8px rgba(30,58,95,.08);border-left:6px solid var(--line);}
+.rules + .rules{margin-top:14px;}
+.rules.bring{border-left-color:var(--sun);}
+.rules.ng{border-left-color:#C0392B;}
+.rules.ok{border-left-color:var(--green);}
+.rules h3{
+  font-family:'Zen Maru Gothic',sans-serif;font-weight:900;font-size:15px;
+  margin-bottom:6px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;
+}
+.rules h3 .due{font-size:11px;color:#fff;background:var(--navy);border-radius:999px;padding:2px 10px;font-weight:700;}
+ul.rulelist{list-style:none;}
+ul.rulelist li{display:flex;gap:9px;align-items:flex-start;padding:9px 0;font-size:14px;border-top:1px dashed var(--line);}
+ul.rulelist li:first-child{border-top:0;}
+ul.rulelist .ic{flex:none;font-size:14px;line-height:1.75;}
+ul.rulelist .sub{display:block;font-size:12px;color:#7a8ea3;margin-top:1px;}
+ul.rulelist b{color:var(--sun);}
 @media(min-width:480px){.packgrid{grid-template-columns:1fr 1fr;}}
 
 footer{text-align:center;margin:34px 0 8px;font-size:12px;color:#8ba0b6;font-family:'Zen Maru Gothic',sans-serif;font-weight:700;}
@@ -553,8 +571,8 @@ ul.todo input:checked{animation:pop .3s ease;}
         </div>
         <div class="stop">
           <div class="time">20:00〜</div>
-          <div class="what">大人の時間 🍻</div>
-          <div class="memo">2家族でゆっくり。明日の集合時間だけ決めて解散</div>
+          <div class="what">大人の時間 🍻 <span class="chip car">21時から室内</span></div>
+          <div class="memo">ウッドデッキは21時まで。<b>それ以降は窓を閉めて室内でしずかに</b>。明日の集合時間だけ決めて解散</div>
         </div>
       </div>
       <div class="note green"><b>🏡 今日の考え方:</b> 「甘い夏のおもいで。」は<b>2家族で借りる一棟貸しのログハウス</b>（最大14名なので7人ならかなり余裕）。屋根付きテラスでBBQができるので、多少ぐずついても中止にならない。移動と宿でゆっくりして、遊ぶのは明日に取っておく。</div>
@@ -738,7 +756,7 @@ ul.todo input:checked{animation:pop .3s ease;}
           <span class="f"><span class="k">IN/OUT</span>15:00 / 10:00</span>
         </div>
         <div class="kidstrip" aria-hidden="true"><span>🌳</span><span>🔥</span><span>🍖</span><span>🛏️</span><span>⭐</span></div>
-        <div class="lc-desc">リゾッチャの東条湖エリア・ログハウス1棟貸し。1階リビング＋寝室、2階に寝室2部屋（洋室・和室）とロフト。寝具は一式ある。<b>屋根付きテラスでBBQ、コンロ・網・炭・着火剤まで無料</b>。キッチンに包丁・フライパン・調味料あり。<b>食事は出ないので食材・調味料・飲み物は持参、タオルと歯ブラシも持参</b>。東条湖おもちゃ王国まで車で約13分。
+        <div class="lc-desc">リゾッチャの東条湖エリア・ログハウス1棟貸し。1階リビング＋寝室、2階に寝室2部屋（洋室・和室）とロフト。寝具は一式ある。<b>屋根付きテラスでBBQ、コンロ・網・炭・着火剤まで無料</b>。キッチンに包丁・フライパン・調味料あり。東条湖おもちゃ王国まで車で約13分。<b style="color:var(--sun);">食材・調味料・飲み物に加えて、タオルと歯ブラシも7人分持参。BBQ・デッキは21時まで</b>。</div>
         <div class="lc-btns">
           <a class="primary" href="https://rezo-cha.com/villa/sweet-summer-memories" target="_blank" rel="noopener">🌐 リゾッチャ公式ページ</a>
           <a class="map" href="https://www.google.com/maps/search/?api=1&query=%E5%85%B5%E5%BA%AB%E7%9C%8C%E5%8A%A0%E6%9D%B1%E5%B8%82%E5%B1%B1%E5%9B%BD2012-176" target="_blank" rel="noopener">📍 地図を開く</a>
@@ -825,6 +843,48 @@ ul.todo input:checked{animation:pop .3s ease;}
 
 <!-- ══════════ TAB 4: 準備 ══════════ -->
 <div class="pane" id="pane-prep">
+
+  <section>
+    <h2><span class="em">⚠️</span>宿のルール（リゾッチャ共通）</h2>
+
+    <div class="rules bring">
+      <h3>🧴 宿にないもの＝持っていくもの <span class="due">ここ大事</span></h3>
+      <ul class="rulelist">
+        <li><span class="ic">🧻</span><span><b>タオル・バスタオル・歯ブラシは一切ない</b><span class="sub">アメニティ類の用意なし。7人分＋子どもの汚し用に予備も。歯みがきセットも人数分</span></span></li>
+        <li><span class="ic">🍖</span><span><b>食事・飲み物・調味料もない</b><span class="sub">油・塩こしょう・タレまで持参。前日の買い出しリストに入れておく</span></span></li>
+        <li><span class="ic">🦟</span><span>虫よけスプレーは持参推奨<span class="sub">定期的に殺虫処理はしているが完全ではない、と公式に明記されている。殺虫剤・箒は宿に備え付け</span></span></li>
+        <li><span class="ic">🧥</span><span>10月の夜は冷える<span class="sub">厚手の靴下・ブランケットの持参が公式でも推奨されている</span></span></li>
+      </ul>
+      <div class="note green"><b>🚿 あるもの:</b> シャンプー・リンス・ボディソープ・ドライヤー、食器類、包丁・フライパン・鍋などの調理器具、布団一式（リネンつき）、Wi-Fi、扇風機・ヒーター。</div>
+    </div>
+
+    <div class="rules ng">
+      <h3>🚫 やっちゃダメなこと</h3>
+      <ul class="rulelist">
+        <li><span class="ic">🕘</span><span><b>ウッドデッキ・BBQは21時まで</b><span class="sub">21時以降は窓を開けたまま騒ぐのもNG。大人の時間は室内でしずかに</span></span></li>
+        <li><span class="ic">🔥</span><span>炭の消火は<b>コップ一杯程度の水</b>で<span class="sub">大量の水をかけるのは禁止。灯油・ガスバーナー・追い着火剤・アルコールの使用は絶対禁止</span></span></li>
+        <li><span class="ic">🎆</span><span>花火は<b>手持ちだけ</b>／焚火は原則禁止<span class="sub">打ち上げ・音の出る花火はNG。子どもに手持ち花火をやらせるなら持参する</span></span></li>
+        <li><span class="ic">🛏️</span><span><b>寝室は飲食禁止</b><span class="sub">食事は1階で。子どものおやつ・ジュースも寝室に持ち込まない</span></span></li>
+        <li><span class="ic">🚭</span><span>全館禁煙・ペット不可・アロマやお香もNG<span class="sub">においが残るものは全部ダメ。楽器や大音量の音楽も禁止</span></span></li>
+        <li><span class="ic">🐗</span><span>ゴミ・食べ残しを外に置かない<span class="sub">害獣が出る。出たら屋内に避難して警察へ連絡、エサやり・接触は禁止</span></span></li>
+      </ul>
+    </div>
+
+    <div class="rules ok">
+      <h3>🧹 帰るときにやること</h3>
+      <ul class="rulelist">
+        <li><span class="ic">🛏️</span><span>布団は<b>敷いたままでOK</b><span class="sub">ただしリネン（シーツ・包布）は必ず使うこと</span></span></li>
+        <li><span class="ic">🗑️</span><span>ゴミは分別表どおりに分けて現地で処分<span class="sub">BBQのゴミが一番かさばる。ゴミ袋は多めに持っていく</span></span></li>
+        <li><span class="ic">📞</span><span>チェックアウトの電話は不要<span class="sub">ただし嘔吐・設備の破損・水漏れ・近隣トラブル・害獣が出た場合は必ず電話する</span></span></li>
+        <li><span class="ic">🎒</span><span>忘れ物チェックはその場で<span class="sub">忘れ物の報告はメール必須（電話だけでは不可）。保管は原則1週間、送付は着払い</span></span></li>
+      </ul>
+      <div class="lc-btns" style="margin-top:12px;">
+        <a class="primary" href="https://rezo-cha.com/caution" target="_blank" rel="noopener">📄 注意事項の原文を読む</a>
+        <a class="map" href="https://rezo-cha.com/guidance" target="_blank" rel="noopener">📘 宿泊の手引き</a>
+      </div>
+    </div>
+  </section>
+
   <section>
     <h2><span class="em">📋</span>これから決める・予約する</h2>
     <div class="check">
@@ -839,9 +899,10 @@ ul.todo input:checked{animation:pop .3s ease;}
         <li><label><input type="checkbox"><span>BBQ食材・飲み物の分担を決める<span class="sub">前日買い出し前提。何を誰が買うかを10/1までにLINEで確定</span></span></label></li>
         <li><label><input type="checkbox"><span>【10/2】BBQ食材＋朝ごはんの材料を買い出し<span class="sub">肉・野菜・焼きそば・飲み物／炊き込みご飯の具・ウィンナー・味噌汁の材料</span></span></label></li>
         <li><label><input type="checkbox"><span>【10/2 夜】炊き込みご飯を炊いておにぎりにする<span class="sub">冷ましてから容器へ。味噌汁の具も切ってジップロックに入れておく</span></span></label></li>
+        <li><label><input type="checkbox"><span>宿のルールを合流家族に共有<span class="sub">タオル・歯ブラシは各自持参／BBQは21時まで／寝室は飲食禁止。この3つだけ先に伝える</span></span></label></li>
         <li><label><input type="checkbox"><span>【直前】10/4のおもちゃ王国の営業と天気を確認<span class="sub">9:30〜17:00の予定。雨なら屋内中心に切り替え</span></span></label></li>
       </ul>
-      <div class="progress" data-progress>0 / 10 完了</div>
+      <div class="progress" data-progress>0 / 11 完了</div>
     </div>
   </section>
 
@@ -857,7 +918,8 @@ ul.todo input:checked{animation:pop .3s ease;}
           <li><label><input type="checkbox"><span>紙皿・紙コップ・割り箸・ゴミ袋</span></label></li>
           <li><label><input type="checkbox"><span>ウェットティッシュ・キッチンペーパー</span></label></li>
           <li><label><input type="checkbox"><span>子ども用の取り皿・スプーン</span></label></li>
-          <li><label><input type="checkbox"><span>タオル・歯ブラシ（宿にはない）</span></label></li>
+          <li><label><input type="checkbox"><span>タオル・バスタオル・歯ブラシ ×7人分<span class="sub">宿に一切ない。子ども用に予備も</span></span></label></li>
+          <li><label><input type="checkbox"><span>ゴミ袋（分別できるように多めに）</span></label></li>
         </ul>
       </div>
       <div class="check">
@@ -896,7 +958,8 @@ ul.todo input:checked{animation:pop .3s ease;}
         <ul class="todo" data-list>
           <li><label><input type="checkbox"><span>上着・羽織り（夕方は冷える）</span></label></li>
           <li><label><input type="checkbox"><span>動きやすい靴・替えの靴下</span></label></li>
-          <li><label><input type="checkbox"><span>虫よけ・かゆみ止め</span></label></li>
+          <li><label><input type="checkbox"><span>虫よけ・かゆみ止め<span class="sub">公式でも持参推奨</span></span></label></li>
+          <li><label><input type="checkbox"><span>ブランケット・厚手の靴下<span class="sub">夜は冷える。公式の推奨持ち物</span></span></label></li>
           <li><label><input type="checkbox"><span>レインコート・折りたたみ傘</span></label></li>
           <li><label><input type="checkbox"><span>どんぐりを入れる袋 🌰</span></label></li>
         </ul>
